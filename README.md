@@ -4,7 +4,7 @@
 
 A living benchmark for biomedical tabular learning.
 
-[Read the paper on arXiv](https://arxiv.org/abs/2611.23779) · [🏆 Live leaderboard](https://huggingface.co/spaces/TabBioMed/leaderboard) · [Datasets](https://huggingface.co/datasets/TabBioMed/TabBioMed)
+[📄 Read the paper on arXiv](https://arxiv.org/abs/2611.23779) · [🏆 Live leaderboard](https://huggingface.co/spaces/TabBioMed/leaderboard) · [Datasets](https://huggingface.co/datasets/TabBioMed/TabBioMed)
 
 The benchmark includes 94 datasets across eight biomedical domains and 23 model implementations. The [dataset catalogue](docs/datasets.md) lists the paper scope. Datasets retain their original licenses and attribution requirements.
 
