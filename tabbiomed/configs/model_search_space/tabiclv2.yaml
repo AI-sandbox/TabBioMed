@@ -1,0 +1,25 @@
+# search space adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/tabicl/hpo.py
+norm_methods:
+  type: categorical
+  choices:
+    - "none"
+    - "power"
+    - "robust"
+    - "quantile_rtdl"
+    - ["none", "power"]
+
+outlier_threshold:
+  type: float
+  low: 4.0
+  high: 12.0
+
+average_logits:
+  objectives: [binary, classification]
+  type: categorical
+  choices: [true, false]
+
+softmax_temperature:
+  objectives: [binary, classification]
+  type: float
+  low: 0.7
+  high: 1.0

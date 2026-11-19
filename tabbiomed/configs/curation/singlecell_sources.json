@@ -1,0 +1,126 @@
+{
+  "protocol": "singlecell_source_annotations_cell_split_v1",
+  "seed": 42,
+  "split_unit": "cell",
+  "split_fractions": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "sources": {
+    "kidney": {
+      "filename": "Tabula_Muris_kidney_filtered.h5ad",
+      "sha256": "faa004cd23693e535e66782c0c68fd121ac55fbbb6daaf552924a331f843f98b",
+      "url": "https://github.com/XPgogogo/scUnified/blob/main/Tabula_Muris_kidney_filtered.h5ad",
+      "citation": "Tabula Muris Consortium (2020), Tabula Muris Senis kidney Smart-seq2 via scUnified",
+      "doi": "10.1038/s41586-020-2496-1",
+      "representation": "source_raw_counts",
+      "source_shape": [
+        1817,
+        21069
+      ],
+      "git_blob_sha1": "53387effa9c29062e9939b71e49a922073f086ef"
+    },
+    "pancreas": {
+      "filename": "Meuro_human_Pancreas_cell.h5",
+      "sha256": "05ee216b9f842d0c5bdcb28293eeefe75cff7509f15445cf52f5410a37002ece",
+      "url": "https://github.com/XPgogogo/scUnified/blob/main/Meuro_human_Pancreas_cell.h5",
+      "citation": "Muraro et al. (2016), human pancreas CEL-Seq2 via scUnified",
+      "doi": "10.1016/j.cels.2016.09.002",
+      "representation": "source_released_expression",
+      "source_shape": [
+        2122,
+        19046
+      ],
+      "git_blob_sha1": "fbf6fd57e624e742161f77134caed9aab0d76af4",
+      "geo_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE85nnn/GSE85241/suppl/GSE85241_cellsystems_dataset_4donors_updated.csv.gz",
+      "geo_sha256": "2f253ffb1f6d54f6bb259e862195f5c20ea3f13e00471b9864ff92773658f513",
+      "geo_verification": "Exact equality before float32 conversion for every selected cell/gene. Convert cell ID hyphens to dots; strip chromosome suffix from gene IDs, retaining the first source row for repeated symbols."
+    }
+  },
+  "datasets": {
+    "sc_muris_age": {
+      "shape": [
+        1817,
+        16436
+      ],
+      "classes": [
+        "18m",
+        "24m",
+        "3m"
+      ],
+      "split_sizes": {
+        "train": 1271,
+        "val": 273,
+        "test": 273
+      },
+      "prepared_sha256": {
+        "feature_names.json": "e18a147332de19a4161f59ccb65ac8bf1cf2206cb09789021de4ae003851eab3",
+        "X.npy": "7845ec493d967f7d7befd1adcc731d61850a3f1848db1053a5585eca2571842e",
+        "sample_metadata.csv": "91784805664d5f55608963b54929ef2bed04de6eef131ca52342383a7c659786",
+        "feature_metadata.csv": "04310f1856b8124e19f4946bdca879f20ada3d05aa44a92c5d3a565a33ff0987",
+        "y.npy": "e03c18ca23df20bf629bc897ae2cfffd2fe603328363dfc9deff721c51124a71",
+        "split_indices.npy": "a07075f322dea2669082c980690683de23965d445831250413377f66b6ad9d5a"
+      }
+    },
+    "sc_muraro_celltype": {
+      "shape": [
+        2119,
+        18508
+      ],
+      "classes": [
+        "acinar",
+        "alpha",
+        "beta",
+        "delta",
+        "ductal",
+        "endothelial",
+        "gamma",
+        "mesenchymal"
+      ],
+      "split_sizes": {
+        "train": 1483,
+        "val": 318,
+        "test": 318
+      },
+      "prepared_sha256": {
+        "feature_names.json": "a569dd59c421261dd532fef1c508fe42ad50dbd129f2202b7a5d52f43958900b",
+        "split_indices.npy": "95c04781cd448a10f595d4e65b369e9c77806ca604c1468efbf1e6fb52b0facb",
+        "y.npy": "e99f1d005d746a7b733178a0c38f9038eefaf7f6c936c5f416d5eadc9976df39",
+        "sample_metadata.csv": "c3fa89b81ceb66322f8cb2d408c8e6ac716b8434159eb8cd857e19bcfbe2e598",
+        "feature_metadata.csv": "000b57aa3ab9574aa0295cf7e67b9c6b9e8d511c7a1dc601afd8cb38ff45aa5f",
+        "X.npy": "a3675c39eb06e2a690056cc3786651f98bc34c0c071e1f5bf7c015578e427067"
+      }
+    },
+    "sc_muris_celltype": {
+      "shape": [
+        1817,
+        16472
+      ],
+      "classes": [
+        "B cell",
+        "T cell",
+        "epithelial cell of proximal tubule",
+        "fenestrated endothelial cell",
+        "kidney collecting duct epithelial cell",
+        "kidney collecting duct principal cell",
+        "kidney loop of Henle ascending limb epithelial cell",
+        "macrophage",
+        "mesangial cell"
+      ],
+      "split_sizes": {
+        "train": 1271,
+        "val": 273,
+        "test": 273
+      },
+      "prepared_sha256": {
+        "sample_metadata.csv": "362f42d39ee5fd6317414fc3919325c97acd844c8d2d994152d697a5ed1f8f05",
+        "feature_metadata.csv": "e0958486cd616433ba0775a01671f63a64de8debaa1edf17a42c95d4ed6de242",
+        "y.npy": "f7ffd8140fadae644a27e44844cf9af63309b68c767279f0b2139cc1f50abb5b",
+        "split_indices.npy": "82550a584c62dd6937e084ab1c36fd3d32f915059bd0bb6b32459c5cda92f851",
+        "X.npy": "3b0183b90a9eaa4db8554e5236cb8eba76f13064877a9db52b9d9bf47a65515d",
+        "feature_names.json": "aa1513d6cca08757f54fc39e8be91cf8f6ab3b674cf69a560455db1c83fae45f"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+# search space adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/xrfm/hpo.py
+bandwidth:
+  type: float
+  low: 0.5
+  high: 200.0
+  log: true
+
+kernel:
+  type: categorical
+  choices: ["lpq_kermac", "l2"]
+  weights: [0.8, 0.2]
+
+exponent:
+  type: float
+  low: 0.7
+  high: 1.4
+
+p_interp:
+  type: float
+  low: 0.0
+  high: 0.8
+
+reg:
+  type: float
+  low: 1e-6
+  high: 10.0
+  log: true
+
+diag:
+  type: categorical
+  choices: [false, true]
+
+bandwidth_mode:
+  type: categorical
+  choices: ["constant"]
+
+standardize_cats:
+  type: categorical
+  choices: [false]
+
+early_stop_multiplier:
+  type: categorical
+  choices: [1.1]

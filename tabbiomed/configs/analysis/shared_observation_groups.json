@@ -1,0 +1,22 @@
+{
+  "description": "Verified shared observations in the current 94-task benchmark, as documented in the manuscript's dataset-dependence appendix. Unlisted datasets form singleton groups. These groups do not combine distinct cohorts solely because they share a repository.",
+  "groups": {
+    "1KG_HGDP": [
+      "continental_1k", "continental_50k", "continental_50k_missing",
+      "coords_1k", "coords_50k", "pca_1k", "pca_50k",
+      "subpop_1000_consec", "subpop_50k", "sexcheck_chrX_50",
+      "sexcheck_chrX_500", "sexcheck_chrX_50k"
+    ],
+    "QM8": ["QM8_E1-CC2", "QM8_f1-CC2"],
+    "QM9": ["QM9_g298", "QM9_gap"],
+    "SIDER": ["SIDER_gastro", "SIDER_nervous"],
+    "Tox21": ["Tox21_NRAhR", "Tox21_NRER", "Tox21_SRMMP"],
+    "Tahoe_cells": [
+      "tahoe_cell_name_500", "tahoe_cell_name_1000",
+      "tahoe_cell_name_5000", "tahoe_g2m_score"
+    ],
+    "AVIDA_HTNFA": ["avida_htnfa_3mer", "avida_htnfa_esm2", "avida_htnfa_onehot"],
+    "TMS_kidney": ["sc_muris_age", "sc_muris_celltype"],
+    "Thyroid_Garavan": ["sick", "thyroid"]
+  }
+}

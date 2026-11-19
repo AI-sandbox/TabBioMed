@@ -1,0 +1,87 @@
+# search space adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/tabpfnv2_5/hpo.py
+zip_model_path:
+  type: categorical
+  hpo_only: true
+  choices:
+  - - tabpfn-v2.5-classifier-v2.5_default-2.ckpt
+    - tabpfn-v2.5-regressor-v2.5_default.ckpt
+  - - tabpfn-v2.5-classifier-v2.5_large-features-L.ckpt
+    - tabpfn-v2.5-regressor-v2.5_low-skew.ckpt
+  - - tabpfn-v2.5-classifier-v2.5_large-features-XL.ckpt
+    - tabpfn-v2.5-regressor-v2.5_quantiles.ckpt
+  - - tabpfn-v2.5-classifier-v2.5_large-samples.ckpt
+    - tabpfn-v2.5-regressor-v2.5_small-samples.ckpt
+  - - tabpfn-v2.5-classifier-v2.5_variant.ckpt
+    - tabpfn-v2.5-regressor-v2.5_variant.ckpt
+softmax_temperature:
+  type: categorical
+  choices:
+  - 0.25
+  - 0.5
+  - 0.6
+  - 0.7
+  - 0.8
+  - 0.9
+  - 1.0
+  - 1.25
+  - 1.5
+balance_probabilities:
+  type: categorical
+  choices:
+  - true
+  - false
+inference_config/OUTLIER_REMOVAL_STD:
+  type: categorical
+  choices:
+  - 3
+  - 6
+  - 12
+inference_config/POLYNOMIAL_FEATURES:
+  type: categorical
+  choices:
+  - 'no'
+  - 25
+inference_config/REGRESSION_Y_PREPROCESS_TRANSFORMS:
+  type: categorical
+  choices:
+  - - null
+  - - null
+    - safepower
+  - - safepower
+  - - kdi_alpha_0.3
+  - - kdi_alpha_1.0
+  - - kdi_alpha_3.0
+  - - quantile_uni
+preprocessing/scaling:
+  type: categorical
+  choices:
+  - - none
+  - - quantile_uni_coarse
+  - - quantile_norm_coarse
+  - - kdi_uni
+  - - kdi_alpha_0.3
+  - - kdi_alpha_3.0
+  - - safepower
+    - quantile_uni
+  - - none
+    - quantile_uni_coarse
+  - - squashing_scaler_default
+    - quantile_uni_coarse
+  - - squashing_scaler_default
+preprocessing/categoricals:
+  type: categorical
+  choices:
+  - numeric
+  - onehot
+  - none
+preprocessing/append_original:
+  type: categorical
+  choices:
+  - true
+  - false
+preprocessing/global:
+  type: categorical
+  choices:
+  - null
+  - svd
+  - svd_quarter_components

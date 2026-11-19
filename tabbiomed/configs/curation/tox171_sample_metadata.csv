@@ -1,0 +1,172 @@
+row,geo_sample,target,disease_state,agent,individual
+0,GSM29783,0,healthy control,IR,NoCa1
+1,GSM29784,0,healthy control,none,NoCa1
+2,GSM29785,0,healthy control,UV,NoCa1
+3,GSM29786,0,healthy control,IR,NoCa2
+4,GSM29787,0,healthy control,none,NoCa2
+5,GSM29788,0,healthy control,UV,NoCa2
+6,GSM29789,0,healthy control,IR,NoCa3
+7,GSM29790,0,healthy control,none,NoCa3
+8,GSM29791,0,healthy control,UV,NoCa3
+9,GSM29792,0,healthy control,IR,NoCa4
+10,GSM29793,0,healthy control,none,NoCa4
+11,GSM29794,0,healthy control,UV,NoCa4
+12,GSM29795,0,healthy control,IR,NoCa5
+13,GSM29796,0,healthy control,none,NoCa5
+14,GSM29797,0,healthy control,UV,NoCa5
+15,GSM29798,0,healthy control,IR,NoCa6
+16,GSM29799,0,healthy control,none,NoCa6
+17,GSM29800,0,healthy control,UV,NoCa6
+18,GSM29801,0,healthy control,IR,NoCa7
+19,GSM29802,0,healthy control,none,NoCa7
+20,GSM29803,0,healthy control,UV,NoCa7
+21,GSM29804,0,healthy control,IR,NoCa8
+22,GSM29805,0,healthy control,none,NoCa8
+23,GSM29806,0,healthy control,UV,NoCa8
+24,GSM29807,0,healthy control,IR,NoCa9
+25,GSM29814,0,healthy control,none,NoCa9
+26,GSM29815,0,healthy control,UV,NoCa9
+27,GSM29816,0,healthy control,IR,NoCa10
+28,GSM29817,0,healthy control,none,NoCa10
+29,GSM29819,0,healthy control,UV,NoCa10
+30,GSM29821,0,healthy control,IR,NoCa11
+31,GSM29822,0,healthy control,none,NoCa11
+32,GSM29823,0,healthy control,UV,NoCa11
+33,GSM29824,0,healthy control,IR,NoCa12
+34,GSM29825,0,healthy control,none,NoCa12
+35,GSM29826,0,healthy control,UV,NoCa12
+36,GSM29827,0,healthy control,IR,NoCa13
+37,GSM29828,0,healthy control,none,NoCa13
+38,GSM29829,0,healthy control,UV,NoCa13
+39,GSM29830,0,healthy control,IR,NoCa14
+40,GSM29831,0,healthy control,none,NoCa14
+41,GSM29832,0,healthy control,UV,NoCa14
+42,GSM29833,0,healthy control,IR,NoCa15
+43,GSM29834,0,healthy control,none,NoCa15
+44,GSM29835,0,healthy control,UV,NoCa15
+45,GSM29836,1,skin cancer control,IR,SkCa1
+46,GSM29837,1,skin cancer control,none,SkCa1
+47,GSM29838,1,skin cancer control,UV,SkCa1
+48,GSM29839,1,skin cancer control,IR,SkCa2
+49,GSM29840,1,skin cancer control,none,SkCa2
+50,GSM29841,1,skin cancer control,UV,SkCa2
+51,GSM29842,1,skin cancer control,IR,SkCa3
+52,GSM29843,1,skin cancer control,none,SkCa3
+53,GSM29844,1,skin cancer control,UV,SkCa3
+54,GSM29845,1,skin cancer control,IR,SkCa4
+55,GSM29846,1,skin cancer control,none,SkCa4
+56,GSM29847,1,skin cancer control,UV,SkCa4
+57,GSM29848,1,skin cancer control,IR,SkCa5
+58,GSM29849,1,skin cancer control,none,SkCa5
+59,GSM29850,1,skin cancer control,UV,SkCa5
+60,GSM29851,1,skin cancer control,IR,SkCa6
+61,GSM29852,1,skin cancer control,none,SkCa6
+62,GSM29853,1,skin cancer control,UV,SkCa6
+63,GSM29854,1,skin cancer control,IR,SkCa7
+64,GSM29855,1,skin cancer control,none,SkCa7
+65,GSM29856,1,skin cancer control,UV,SkCa7
+66,GSM29857,1,skin cancer control,IR,SkCa8
+67,GSM29858,1,skin cancer control,none,SkCa8
+68,GSM29859,1,skin cancer control,UV,SkCa8
+69,GSM29860,1,skin cancer control,IR,SkCa9
+70,GSM29861,1,skin cancer control,none,SkCa9
+71,GSM29862,1,skin cancer control,UV,SkCa9
+72,GSM29863,1,skin cancer control,IR,SkCa10
+73,GSM29864,1,skin cancer control,none,SkCa10
+74,GSM29865,1,skin cancer control,UV,SkCa10
+75,GSM29866,1,skin cancer control,IR,SkCa11
+76,GSM29867,1,skin cancer control,none,SkCa11
+77,GSM29868,1,skin cancer control,UV,SkCa11
+78,GSM29869,1,skin cancer control,IR,SkCa12
+79,GSM29870,1,skin cancer control,none,SkCa12
+80,GSM29871,1,skin cancer control,UV,SkCa12
+81,GSM29872,1,skin cancer control,IR,SkCa13
+82,GSM29873,1,skin cancer control,none,SkCa13
+83,GSM29874,1,skin cancer control,UV,SkCa13
+84,GSM29875,1,skin cancer control,IR,SkCa14
+85,GSM29876,1,skin cancer control,none,SkCa14
+86,GSM29877,1,skin cancer control,UV,SkCa14
+87,GSM29878,1,skin cancer control,IR,SkCa15
+88,GSM29879,1,skin cancer control,none,SkCa15
+89,GSM29880,1,skin cancer control,UV,SkCa15
+90,GSM29881,2,limited toxicity control,IR,RadC1
+91,GSM29882,2,limited toxicity control,none,RadC1
+92,GSM29883,2,limited toxicity control,UV,RadC1
+93,GSM29884,2,limited toxicity control,IR,RadC2
+94,GSM29885,2,limited toxicity control,none,RadC2
+95,GSM29886,2,limited toxicity control,UV,RadC2
+96,GSM29887,2,limited toxicity control,IR,RadC3
+97,GSM29888,2,limited toxicity control,none,RadC3
+98,GSM29889,2,limited toxicity control,UV,RadC3
+99,GSM29890,2,limited toxicity control,IR,RadC4
+100,GSM29891,2,limited toxicity control,none,RadC4
+101,GSM29892,2,limited toxicity control,UV,RadC4
+102,GSM29893,2,limited toxicity control,IR,RadC5
+103,GSM29894,2,limited toxicity control,none,RadC5
+104,GSM29895,2,limited toxicity control,UV,RadC5
+105,GSM29896,2,limited toxicity control,IR,RadC6
+106,GSM29897,2,limited toxicity control,none,RadC6
+107,GSM29898,2,limited toxicity control,UV,RadC6
+108,GSM29899,2,limited toxicity control,IR,RadC7
+109,GSM29900,2,limited toxicity control,none,RadC7
+110,GSM29901,2,limited toxicity control,UV,RadC7
+111,GSM29902,2,limited toxicity control,IR,RadC8
+112,GSM29903,2,limited toxicity control,none,RadC8
+113,GSM29904,2,limited toxicity control,UV,RadC8
+114,GSM29905,2,limited toxicity control,IR,RadC9
+115,GSM29906,2,limited toxicity control,none,RadC9
+116,GSM29907,2,limited toxicity control,UV,RadC9
+117,GSM29908,2,limited toxicity control,IR,RadC10
+118,GSM29909,2,limited toxicity control,none,RadC10
+119,GSM29910,2,limited toxicity control,UV,RadC10
+120,GSM29955,2,limited toxicity control,IR,RadC11
+121,GSM29956,2,limited toxicity control,none,RadC11
+122,GSM29957,2,limited toxicity control,UV,RadC11
+123,GSM29958,2,limited toxicity control,IR,RadC12
+124,GSM29959,2,limited toxicity control,none,RadC12
+125,GSM29960,2,limited toxicity control,UV,RadC12
+126,GSM29961,2,limited toxicity control,IR,RadC13
+127,GSM29962,2,limited toxicity control,none,RadC13
+128,GSM29963,2,limited toxicity control,UV,RadC13
+129,GSM29964,3,acute toxicity,IR,Rad1
+130,GSM29965,3,acute toxicity,none,Rad1
+131,GSM29966,3,acute toxicity,UV,Rad1
+132,GSM29967,3,acute toxicity,IR,Rad2
+133,GSM29968,3,acute toxicity,none,Rad2
+134,GSM29969,3,acute toxicity,UV,Rad2
+135,GSM29970,3,acute toxicity,IR,Rad3
+136,GSM29971,3,acute toxicity,none,Rad3
+137,GSM29972,3,acute toxicity,UV,Rad3
+138,GSM29973,3,acute toxicity,IR,Rad4
+139,GSM29974,3,acute toxicity,none,Rad4
+140,GSM29975,3,acute toxicity,UV,Rad4
+141,GSM29976,3,acute toxicity,IR,RadS5
+142,GSM29977,3,acute toxicity,none,RadS5
+143,GSM29978,3,acute toxicity,UV,RadS5
+144,GSM29979,3,acute toxicity,IR,RadS6
+145,GSM29980,3,acute toxicity,none,RadS6
+146,GSM29981,3,acute toxicity,UV,RadS6
+147,GSM29982,3,acute toxicity,IR,RadS7
+148,GSM29983,3,acute toxicity,none,RadS7
+149,GSM29984,3,acute toxicity,UV,RadS7
+150,GSM29985,3,acute toxicity,IR,RadS8
+151,GSM29986,3,acute toxicity,none,RadS8
+152,GSM29987,3,acute toxicity,UV,RadS8
+153,GSM29988,3,acute toxicity,IR,RadS9
+154,GSM29989,3,acute toxicity,none,RadS9
+155,GSM29990,3,acute toxicity,UV,RadS9
+156,GSM29991,3,acute toxicity,IR,RadS10
+157,GSM29992,3,acute toxicity,none,RadS10
+158,GSM29993,3,acute toxicity,UV,RadS10
+159,GSM29994,3,acute toxicity,IR,RadS11
+160,GSM29995,3,acute toxicity,none,RadS11
+161,GSM29996,3,acute toxicity,UV,RadS11
+162,GSM29997,3,acute toxicity,IR,RadS12
+163,GSM29998,3,acute toxicity,none,RadS12
+164,GSM29999,3,acute toxicity,UV,RadS12
+165,GSM30000,3,acute toxicity,IR,RadS13
+166,GSM30001,3,acute toxicity,none,RadS13
+167,GSM30002,3,acute toxicity,UV,RadS13
+168,GSM30003,3,acute toxicity,IR,RadS14
+169,GSM30004,3,acute toxicity,none,RadS14
+170,GSM30005,3,acute toxicity,UV,RadS14

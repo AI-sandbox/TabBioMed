@@ -1,0 +1,17 @@
+alpha:
+  type: float
+  low: 0.000001
+  high: 1.0
+  log: true
+
+fit_intercept:
+  type: categorical
+  choices: [true, false]
+
+class_weight:
+  type: categorical
+  choices: ["balanced", null]
+
+scaler:
+  type: categorical
+  choices: ['standard', 'quantile']

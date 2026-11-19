@@ -1,0 +1,9 @@
+C:
+  type: float
+  low: 0.00000001
+  high: 10000000000.0
+  log: true
+
+scaler:
+  type: categorical
+  choices: ['standard', 'quantile']

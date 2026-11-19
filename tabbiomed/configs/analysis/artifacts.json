@@ -1,0 +1,398 @@
+[
+  {
+    "label": "fig:results_summary_upset_plot",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/upset.py"
+    ]
+  },
+  {
+    "label": "fig:dataset_summary_1",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/dataset_inventory.py"
+    ]
+  },
+  {
+    "label": "tab:rank_summary",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/tables/model_summary.py"
+    ]
+  },
+  {
+    "label": "fig:wilcoxon_test_global",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/cd.py"
+    ]
+  },
+  {
+    "label": "fig:elo_rankings_global",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo.py"
+    ]
+  },
+  {
+    "label": "fig:elo_regimes_classification_23",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_regimes.py"
+    ]
+  },
+  {
+    "label": "fig:pareto_scatter",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/pareto.py"
+    ]
+  },
+  {
+    "label": "tab:dataset_domains",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/tables/dataset_inventory.py"
+    ]
+  },
+  {
+    "label": "fig:dataset_summary_2",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/dataset_inventory.py"
+    ]
+  },
+  {
+    "label": "fig:calibration_family_comparison",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/calibration.py"
+    ]
+  },
+  {
+    "label": "tab:pretraining_overlap",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/tables/dataset_inventory.py"
+    ]
+  },
+  {
+    "label": "tab:pretraining_overlap_robustness",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/pretraining.py"
+    ]
+  },
+  {
+    "label": "fig:pretraining_overlap_rank_shifts",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/pretraining.py",
+      "tabbiomed/analysis/figures/pretraining.py"
+    ]
+  },
+  {
+    "label": "fig:source_dependence",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/source_dependence.py"
+    ]
+  },
+  {
+    "label": "tab:tabarena_model_comparison",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/cross_benchmark.py"
+    ]
+  },
+  {
+    "label": "tab:tabarena_task_agreement",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/cross_benchmark.py"
+    ]
+  },
+  {
+    "label": "fig:hpo_budget_comparison",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/hpo_history.py",
+      "tabbiomed/analysis/figures/hpo_budgets.py"
+    ]
+  },
+  {
+    "label": "tab:hpo_realized_overtuning",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/hpo_history.py",
+      "tabbiomed/analysis/figures/hpo_budgets.py"
+    ]
+  },
+  {
+    "label": "fig:hpo_validation_test_gaps",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/hpo_history.py",
+      "tabbiomed/analysis/figures/hpo_budgets.py"
+    ]
+  },
+  {
+    "label": "tab:default_tuned_frequencies",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/hpo_sensitivity.py"
+    ]
+  },
+  {
+    "label": "tab:default_tuned_degradation",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/hpo_sensitivity.py"
+    ]
+  },
+  {
+    "label": "fig:hpo_logloss_gaps",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/hpo_sensitivity.py"
+    ]
+  },
+  {
+    "label": "fig:hpo_200_elo",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/hpo_sensitivity.py"
+    ]
+  },
+  {
+    "label": "tab:failure_models",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/failures.py"
+    ]
+  },
+  {
+    "label": "tab:failure_domains",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/failures.py"
+    ]
+  },
+  {
+    "label": "fig:accuracy_completion_pareto",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/failures.py"
+    ]
+  },
+  {
+    "label": "fig:a100_all_tasks",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/a100.py"
+    ]
+  },
+  {
+    "label": "fig:a100_classification",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/a100.py"
+    ]
+  },
+  {
+    "label": "fig:win_rate_matrix_global",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/win_rates.py"
+    ]
+  },
+  {
+    "label": "fig:elo_c_complete",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo.py"
+    ]
+  },
+  {
+    "label": "fig:elo_regimes_all_tasks_21",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_regimes.py"
+    ]
+  },
+  {
+    "label": "fig:inference_training_scaling",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/runtime.py"
+    ]
+  },
+  {
+    "label": "fig:feature_tercile_performance",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_features.py"
+    ]
+  },
+  {
+    "label": "fig:pca_paired_outcomes",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/pca.py"
+    ]
+  },
+  {
+    "label": "fig:domain_norm_ehr",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_domains.py"
+    ]
+  },
+  {
+    "label": "fig:pareto_ehr",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/pareto.py"
+    ]
+  },
+  {
+    "label": "fig:domain_norm_drug",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_domains.py"
+    ]
+  },
+  {
+    "label": "fig:pareto_drug",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/pareto.py"
+    ]
+  },
+  {
+    "label": "fig:domain_norm_genom",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_domains.py"
+    ]
+  },
+  {
+    "label": "fig:pareto_genom",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/pareto.py"
+    ]
+  },
+  {
+    "label": "fig:domain_norm_mtbls",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_domains.py"
+    ]
+  },
+  {
+    "label": "fig:pareto_mtbls",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/pareto.py"
+    ]
+  },
+  {
+    "label": "fig:domain_norm_ptomics",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_domains.py"
+    ]
+  },
+  {
+    "label": "fig:pareto_ptomics",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/pareto.py"
+    ]
+  },
+  {
+    "label": "fig:domain_norm_sc",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_domains.py"
+    ]
+  },
+  {
+    "label": "fig:pareto_sc",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/pareto.py"
+    ]
+  },
+  {
+    "label": "fig:domain_norm_sb",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_domains.py"
+    ]
+  },
+  {
+    "label": "fig:pareto_sb",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/pareto.py"
+    ]
+  },
+  {
+    "label": "fig:domain_norm_trans",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/elo_domains.py"
+    ]
+  },
+  {
+    "label": "fig:pareto_trans",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/figures/pareto.py"
+    ]
+  },
+  {
+    "label": "tab:binary_metric_ranks",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/binary_metrics.py"
+    ]
+  },
+  {
+    "label": "tab:binary_metric_agreement",
+    "kind": "table",
+    "sources": [
+      "tabbiomed/analysis/studies/binary_metrics.py"
+    ]
+  },
+  {
+    "label": "fig:binary_imbalance_agreement",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/binary_metrics.py"
+    ]
+  },
+  {
+    "label": "fig:metafeature_correlations",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/metafeatures.py"
+    ]
+  },
+  {
+    "label": "fig:discovery_archetypes",
+    "kind": "figure",
+    "sources": [
+      "tabbiomed/analysis/studies/metafeatures.py"
+    ]
+  },
+  {
+    "label": "tab:pca_tfm_deltas",
+    "kind": "longtable",
+    "sources": [
+      "tabbiomed/analysis/studies/pca.py"
+    ]
+  }
+]

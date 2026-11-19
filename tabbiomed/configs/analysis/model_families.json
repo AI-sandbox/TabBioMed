@@ -1,0 +1,32 @@
+{
+  "exclude_from_expected_benchmark": [],
+  "regression_optional_missing_models": [
+    "HyperFast",
+    "TabPFN-Wide"
+  ],
+  "model_family": {
+    "DecisionTree": "Tree-based",
+    "RandomForest": "Tree-based",
+    "XGBoost": "Tree-based",
+    "LightGBM": "Tree-based",
+    "CatBoost": "Tree-based",
+    "xRFM": "Tree-based",
+    "LinearModel": "Baselines",
+    "LassoModel": "Baselines",
+    "RidgeModel": "Baselines",
+    "ElasticNet": "Baselines",
+    "KNN": "Baselines",
+    "SVM": "Baselines",
+    "NeoLsSVM": "Baselines",
+    "MLP": "Neural networks",
+    "RealMLP": "Neural networks",
+    "TabM": "Neural networks",
+    "TabPFNv2.5": "Foundation models",
+    "TabPFN-Wide": "Foundation models",
+    "RealTabPFNv2.5": "Foundation models",
+    "TabICLv2": "Foundation models",
+    "TabDPT": "Foundation models",
+    "HyperFast": "Foundation models",
+    "iLTM": "Foundation models"
+  }
+}

@@ -1,0 +1,98 @@
+# search space adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/tabm/hpo.py
+arch_type:
+  type: categorical
+  choices: ["tabm-mini"]
+
+tabm_k:
+  type: categorical
+  choices: [32]
+
+share_training_batches:
+  type: categorical
+  choices: [false]
+
+batch_size:
+  type: categorical
+  choices: ["auto"]
+
+patience:
+  type: categorical
+  choices: [16]
+
+lr:
+  type: float
+  low: 1e-4
+  high: 3e-3
+  log: true
+
+weight_decay_choice:
+  type: categorical
+  choices: [0.0, 1.0]
+
+weight_decay:
+  type: conditional
+  depends_on: weight_decay_choice
+  0.0: 0.0
+  1.0:
+    type: float
+    low: 1e-4
+    high: 1e-1
+    log: true
+
+gradient_clipping_norm:
+  type: categorical
+  choices: [1.0]
+
+amp:
+  type: categorical
+  choices: [false]
+
+compile_model:
+  type: categorical
+  choices: [false]
+
+n_blocks:
+  type: categorical
+  choices: [2, 3, 4, 5]
+
+d_block:
+  type: categorical
+  choices: [128, 144, 160, 176, 192, 208, 224, 240, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512, 528, 544, 560, 576, 592, 608, 624, 640, 656, 672, 688, 704, 720, 736, 752, 768, 784, 800, 816, 832, 848, 864, 880, 896, 912, 928, 944, 960, 976, 992, 1008, 1024]
+
+dropout_choice:
+  type: categorical
+  choices: [0.0, 1.0]
+
+dropout:
+  type: conditional
+  depends_on: dropout_choice
+  0.0: 0.0
+  1.0:
+    type: float
+    low: 0.0
+    high: 0.5
+
+num_emb_type:
+  type: categorical
+  choices: ["pwl"]
+
+d_embedding:
+  type: categorical
+  choices: [8, 12, 16, 20, 24, 28, 32]
+
+num_emb_n_bins:
+  type: int
+  low: 2
+  high: 128
+
+eval_batch_size:
+  type: categorical
+  choices: [64]
+
+bool_to_cat:
+  type: categorical
+  choices: [true]
+
+average_logits:
+  type: categorical
+  choices: [false]

@@ -1,0 +1,16 @@
+# search space adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/knn/hpo.py
+n_neighbors:
+  type: categorical
+  choices: [1,2,3,4,5,6,7,8,9,10,11,13,15,20,30,40,50,100,200,300,400,500]
+
+weights:
+  type: categorical
+  choices: ['distance', 'uniform']
+
+p:
+  type: categorical
+  choices: [1, 1.5, 2]
+
+scaler:
+  type: categorical
+  choices: ['standard', 'quantile']

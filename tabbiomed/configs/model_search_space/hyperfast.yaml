@@ -1,0 +1,82 @@
+n_ensemble:
+  type: categorical
+  choices: [4, 8, 16, 32]
+
+batch_size:
+  type: categorical
+  choices: [1024, 2048]
+
+nn_bias:
+  type: categorical
+  choices: [true, false]
+
+nn_bias_scale:
+  type: conditional
+  depends_on: nn_bias
+  false: 1.0
+  true:
+    type: float
+    low: 0.01
+    high: 1.0
+    log: true
+
+stratify_sampling:
+  type: categorical
+  choices: [true, false]
+
+optimization:
+  type: categorical
+  choices: [ensemble_optimize, null]
+  weights: [9, 1]
+
+optimize_steps:
+  type: conditional
+  depends_on: optimization
+  null: 0
+  ensemble_optimize: [1, 4, 8, 16, 32, 64, 128, null]
+
+finetuning_lr:
+  type: conditional
+  depends_on: optimization
+  null: 0.0001
+  ensemble_optimize:
+    type: float
+    low: 0.00001
+    high: 0.003
+    log: true
+
+finetuning_dropout:
+  type: conditional
+  depends_on: optimization
+  null: 0.15
+  ensemble_optimize:
+    type: float
+    low: 0.0
+    high: 0.5
+
+finetuning_weight_decay:
+  type: conditional
+  depends_on: optimization
+  null: 0.01
+  ensemble_optimize:
+    type: float
+    low: 0.000001
+    high: 0.1
+    log: true
+
+finetuning_parameter_scope:
+  type: categorical
+  choices: [all, network, head]
+  weights: [8, 1, 1]
+
+finetuning_batch_size:
+  type: conditional
+  depends_on: optimization
+  null: 1024
+  ensemble_optimize: [128, 256, 1024]
+
+label_smoothing:
+  type: conditional
+  depends_on: optimization
+  null: 0.0
+  ensemble_optimize: [0.0, 0.05, 0.1]

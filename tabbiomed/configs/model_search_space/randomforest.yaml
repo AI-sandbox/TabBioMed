@@ -1,0 +1,44 @@
+# Adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/random_forest/hpo.py
+max_depth:
+  type: categorical
+  choices: [null, 4, 6, 8, 12, 16]
+
+n_estimators:
+  type: int
+  low: 100
+  high: 300
+  log: false
+
+max_features:
+  type: categorical
+  choices: ["sqrt", "log2", 0.2, 0.33, 0.5, 0.67, 0.8, 1.0]
+
+max_samples:
+  type: categorical
+  choices: [null, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+
+min_samples_split:
+  type: int
+  low: 2
+  high: 10
+  log: false
+
+min_samples_leaf:
+  type: int
+  low: 1
+  high: 20
+  log: false
+
+min_impurity_decrease:
+  type: float
+  low: 0.0
+  high: 1e-4
+  log: false
+
+bootstrap:
+  type: categorical
+  choices: [True]
+
+class_weight:
+  type: categorical
+  choices: ["None", "balanced", "balanced_subsample"]

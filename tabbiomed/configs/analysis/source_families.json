@@ -1,0 +1,34 @@
+{
+  "description": "Broader source families used in the current manuscript's dataset-dependence analysis. Shared-sample group names refer to shared_observation_groups.json. Other tasks are singletons.",
+  "families": {
+    "1KG_HGDP": {"shared_sample_groups": ["1KG_HGDP"]},
+    "Tahoe": {
+      "shared_sample_groups": ["Tahoe_cells"],
+      "datasets": ["tahoe_batch_integration_14plates"]
+    },
+    "COGNANO": {
+      "shared_sample_groups": ["AVIDA_HTNFA"],
+      "datasets": ["avida_sarscov2_3mer", "avida_hil6_onehot"]
+    },
+    "MoleculeNet": {
+      "shared_sample_groups": ["SIDER", "QM8", "QM9", "Tox21"],
+      "datasets": ["ESOL", "HIV"]
+    },
+    "MultiOmics": {"datasets": [
+      "MultiOmics_GS-BRCA", "MultiOmics_GS-COAD", "MultiOmics_GS-GBM",
+      "MultiOmics_GS-LGG", "MultiOmics_GS-OV"
+    ]},
+    "MetaboLights": {"datasets": ["MTBLS136", "MTBLS161", "MTBLS404"]},
+    "MetabolomicsWorkbench": {"datasets": ["ST000369", "ST000496", "ST001000", "ST001047"]},
+    "TabPFN-VOCS": {"datasets": ["Gum1_s", "Noc_s", "PT-Mush21"]},
+    "Thyroid_Garavan": {"shared_sample_groups": ["Thyroid_Garavan"]},
+    "PEER": {"datasets": ["true_betalactamase_unique", "true_fluorescence", "true_melting_point"]},
+    "scikit-feature": {"datasets": [
+      "ALLAML", "CLL_SUB_111", "GLIOMA", "GLI_85", "Prostate_GE", "SMK_CAN_187", "TOX_171", "lung"
+    ]},
+    "scUnified": {
+      "shared_sample_groups": ["TMS_kidney"],
+      "datasets": ["sc_muraro_celltype"]
+    }
+  }
+}

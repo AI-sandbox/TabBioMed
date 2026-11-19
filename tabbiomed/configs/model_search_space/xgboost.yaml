@@ -1,0 +1,73 @@
+# search space adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/xgboost/hpo.py
+n_estimators:
+  type: categorical
+  choices: [10000]
+
+max_depth:
+  type: int
+  low: 4
+  high: 10
+  log: true
+
+learning_rate:
+  type: float
+  low: 0.005
+  high: 0.1
+  log: true
+
+min_child_weight:
+  type: float
+  low: 0.00001
+  high: 5.0
+  log: true
+
+subsample:
+  type: float
+  low: 0.6
+  high: 1.0
+
+colsample_bylevel:
+  type: float
+  low: 0.6
+  high: 1.0
+
+colsample_bynode:
+  type: float
+  low: 0.6
+  high: 1.0
+
+alpha:
+  type: float
+  low: 0.0001
+  high: 5.0
+
+lambda:
+  type: float
+  low: 0.0001
+  high: 5.0
+
+grow_policy:
+  type: categorical
+  choices: ["depthwise", "lossguide"]
+
+max_cat_to_onehot:
+  type: int
+  low: 8
+  high: 100
+  log: true
+
+max_leaves:
+  type: int
+  low: 8
+  high: 1024
+  log: true
+
+enable_categorical:
+  type: categorical
+  choices: [true]
+
+scale_pos_weight:
+  type: float
+  low: 0.1
+  high: 10
+  log: true

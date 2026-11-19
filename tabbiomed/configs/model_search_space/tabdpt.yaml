@@ -1,0 +1,42 @@
+# search space adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/tabdpt/hpo.py
+temperature:
+  objectives: [binary, classification]
+  type: categorical
+  choices: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.25, 1.5]
+
+context_size:
+  type: categorical
+  choices: [256, 768, 2048]
+
+permute_classes:
+  objectives: [binary, classification]
+  type: categorical
+  choices: [true, false]
+
+normalizer:
+  type: categorical
+  choices:
+    - "standard"
+    - null
+    - "minmax"
+    - "robust"
+    - "power"
+    - "quantile-uniform"
+    - "quantile-normal"
+    - "log1p"
+
+missing_indicators:
+  type: categorical
+  choices: [true, false]
+
+clip_sigma:
+  type: categorical
+  choices: [2, 4, 6, 8]
+
+feature_reduction:
+  type: categorical
+  choices: ["pca", "subsample"]
+
+faiss_metric:
+  type: categorical
+  choices: ["l2", "ip"]

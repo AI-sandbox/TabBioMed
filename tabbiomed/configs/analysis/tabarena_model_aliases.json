@@ -1,0 +1,16 @@
+{
+  "RealTabPFNv2.5": {"tabarena_model": "RealTabPFN-2.5", "protocol": "tuned+ensembled"},
+  "TabICLv2": {"tabarena_model": "TabICLv2", "protocol": "default"},
+  "RealMLP": {"tabarena_model": "RealMLP", "protocol": "tuned+ensembled"},
+  "TabDPT": {"tabarena_model": "TabDPT", "protocol": "tuned+ensembled"},
+  "TabM": {"tabarena_model": "TabM", "protocol": "tuned+ensembled"},
+  "LightGBM": {"tabarena_model": "LightGBM", "protocol": "tuned+ensembled"},
+  "CatBoost": {"tabarena_model": "CatBoost", "protocol": "tuned+ensembled"},
+  "iLTM": {"tabarena_model": "iLTM", "protocol": "tuned+ensembled"},
+  "XGBoost": {"tabarena_model": "XGBoost", "protocol": "tuned+ensembled"},
+  "xRFM": {"tabarena_model": "xRFM", "protocol": "tuned+ensembled"},
+  "TabPFNv2.5": {"tabarena_model": "TabPFNv2", "protocol": "tuned+ensembled", "note": "version mismatch (v2.5 vs v2)"},
+  "RandomForest": {"tabarena_model": "RandomForest", "protocol": "tuned+ensembled"},
+  "KNN": {"tabarena_model": "KNN", "protocol": "tuned+ensembled"},
+  "LinearModel": {"tabarena_model": "Linear", "protocol": "tuned+ensembled"}
+}

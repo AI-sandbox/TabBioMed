@@ -1,0 +1,107 @@
+{
+  "protocol": "clinical_source_coding_v1",
+  "datasets": {
+    "HeartDisease_UCI": {
+      "shape": [
+        920,
+        13
+      ],
+      "cat_idx": [
+        1,
+        2,
+        5,
+        6,
+        8,
+        10,
+        11,
+        12
+      ],
+      "numeric_X_sha256": "5949197c9a1f27ea2c5c839e9720dd4b1fcecc345e79479bd44a8a0c3153de9e",
+      "y_sha256": "15a5dbdd9edb27611f6594d44138768f07a8849e1b5e5f76a58fc4ddae85b007",
+      "split_sha256": "6f17c660d01f3cfdeadd56ac05e599dd70d9f62eab5878663ffe44bcccd88a65",
+      "split_sizes": {
+        "train": 644,
+        "val": 138,
+        "test": 138
+      },
+      "missing_cells": 1932,
+      "unified_shape": [
+        920,
+        13
+      ],
+      "unified_numeric_X_sha256": "5949197c9a1f27ea2c5c839e9720dd4b1fcecc345e79479bd44a8a0c3153de9e"
+    },
+    "thyroid": {
+      "shape": [
+        7200,
+        20
+      ],
+      "cat_idx": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "numeric_X_sha256": "14b3a1f70dc998ff536d68213d02462a9fe7538cc18433d6ce5480fc54431dc4",
+      "y_sha256": "1d7ff10f3235ed9f64b5750b25dc2333598edb875f2e46b2c7d881b18ebc8107",
+      "split_sha256": "dca62d260f78e8d3b206c479773e7dd6d60c52182cb76c6fbf83a3f0c64fa79d",
+      "split_sizes": {
+        "train": 5040,
+        "val": 1080,
+        "test": 1080
+      },
+      "missing_cells": 0,
+      "unified_shape": [
+        7200,
+        21
+      ],
+      "unified_numeric_X_sha256": "34680727e51410cc39514826b519b7e3c5f3a38122a23d9d903beb861503c7a4"
+    },
+    "National_Health_and_Nutrition_Health_Survey": {
+      "shape": [
+        2278,
+        7
+      ],
+      "cat_idx": [
+        0,
+        1,
+        4
+      ],
+      "numeric_X_sha256": "666391bdb0578f6387ed8178edc4cd728e9f0a71406c729b13f5627475b73489",
+      "y_sha256": "a972447f5df79f3e13daeba072c89ef016587b252e46d92be54f1f6ca7060b2e",
+      "split_sha256": "2cde5acf1840ba9cdb248dcee7daf194817fbb93f86e007289aa9107ded82c34",
+      "split_sizes": {
+        "train": 1594,
+        "val": 342,
+        "test": 342
+      },
+      "missing_cells": 1,
+      "unified_shape": [
+        2278,
+        7
+      ],
+      "unified_numeric_X_sha256": "666391bdb0578f6387ed8178edc4cd728e9f0a71406c729b13f5627475b73489"
+    }
+  },
+  "thyroid_source_url": "https://archive.ics.uci.edu/static/public/102/thyroid+disease.zip",
+  "thyroid_source_sha256": {
+    "ann-train.data": "3da53a156bda36cb0c97e9f4b6b111c9226c54c4aa00230de5604b787c47e3a6",
+    "ann-test.data": "c649ea19416e78c7996cfaaa2a9e281cb597d4b075aaa68c494fc3e4ee3aa30b"
+  },
+  "nhanes_source_sha256": "a5e588ef5d015349b2656b2905cd2ac9603381643e188a5587a58cf5f972354d",
+  "nhanes_source_url": "https://archive.ics.uci.edu/dataset/887",
+  "nhanes_codebooks": [
+    "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/PAQ_H.htm",
+    "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.htm"
+  ]
+}

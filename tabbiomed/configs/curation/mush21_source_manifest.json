@@ -1,0 +1,19 @@
+{
+  "protocol": "mush21_strain_outer_v1",
+  "source_url": "https://raw.githubusercontent.com/Maraikep/Mortierellaceae_VOCs/e7f8a0bfa4120b5147e06afe1a958ea07515b1a0/PTR_data.txt",
+  "source_sha256": "04bf3196a04ca339412f3e5017a68811a21fe1e55a0ced6c67283985cd38ca52",
+  "publication_doi": "10.1038/s41598-023-29134-6",
+  "supplement_url": "https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41598-023-29134-6/MediaObjects/41598_2023_29134_MOESM2_ESM.xlsx",
+  "supplement_sha256": "677668a9d264e5a7e0819b0add2da1c2ce266b4e5635188ca003e13a6126f942",
+  "release_file": "TabPFN-VOCS/data_classif_2.json",
+  "release_key": "Funghi21",
+  "release_sha256": "ab15cf21754d27a0569ecc1f9a0cf4c77cb9ea33475b5833652dce18e6a9dc2d",
+  "mapping_sha256": "197eb325c54e016553191ae1447c19586b23d104abc8bd11dd5bea012f1f0088",
+  "X_values_sha256": "ac179113cfa14dccd13ea4c1df9cb9ce6a70c370d1f6cbe27b31fcd2ccfd70d9",
+  "y_values_sha256": "bbb0f4c3d1025f17408a24bcdeb10cdce29460df9d54e9e730b2d98d5a726c85",
+  "matched_samples": 593,
+  "shared_named_peaks": 114,
+  "max_abs_reconstruction_error": 4.547473508864641e-13,
+  "source_culture_groups": 50,
+  "biological_strains": 25
+}

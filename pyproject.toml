@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabbiomed"
+version = "0.1.0"
+description = "A benchmark for biomedical tabular learning"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "numpy==2.3.3",
+    "pandas==2.3.3",
+    "scipy==1.16.0",
+    "scikit-learn==1.6.1",
+    "torch==2.8.0",
+    "optuna==4.3.0",
+    "delu==0.0.26",
+    "loguru==0.7.3",
+    "PyYAML==6.0.2",
+    "huggingface-hub==0.36.0",
+    "pyarrow==19.0.1",
+    "filelock>=3.16,<4",
+    "joblib>=1.4,<2",
+    "threadpoolctl>=3,<4",
+    "packaging>=24",
+    "psutil>=6,<8",
+    "tqdm>=4.66,<5",
+]
+
+[project.optional-dependencies]
+analysis = [
+    "matplotlib==3.10.8",
+    "seaborn==0.13.2",
+    "statsmodels==0.14.4",
+    "UpSetPlot==0.9.0",
+    "pymfe==0.4.4",
+    "scikit-posthocs==0.12.0",
+    "Pillow==11.2.1",
+]
+trees = ["xgboost==3.2.0", "lightgbm==4.5.0", "catboost==1.2.8"]
+neural = ["pytabkit==1.7.3", "tabm==0.0.3", "rtdl-num-embeddings==0.0.12"]
+pfns = ["tabpfn==6.4.1", "tabpfn-extensions==0.2.2", "kditransform==1.2.0"]
+tabicl = ["tabicl==2.0.2"]
+tabdpt = ["tabdpt==1.1.12"]
+hyperfast = ["hyperfast==1.1.1"]
+iltm = ["iltm==0.1.6"]
+kernels = ["neo-ls-svm==0.3.0"]
+xrfm = ["xrfm[cu12]==0.4.3", "kermac[cu12]==0.1.4", "cuda-core[cu12]==0.4.2", "nvidia-cuda-cccl==13.0.85"]
+tabpfn-wide = ["tabpfnwide==0.3.0", "tabpfn==8.0.3", "tabpfn-extensions==0.4.2", "kditransform==1.2.0"]
+
+curation-molecules = ["deepchem==2.6.0.dev20211026183818", "rdkit==2025.3.5"]
+curation-singlecell = ["anndata==0.12.10", "h5py==3.14.0", "scanpy==1.11.4"]
+curation-sequences = ["biopython>=1.84,<2", "protenc==0.1.6", "datasets>=3,<5", "requests>=2.32,<3"]
+curation-genomics = ["snputils==0.2.32", "pysam==0.23.3"]
+curation-sources = ["openpyxl==3.1.5", "cptac>=1.5,<2", "requests>=2.32,<3"]
+
+[project.scripts]
+tabbiomed = "tabbiomed.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tabbiomed*"]
+
+[tool.setuptools.package-data]
+tabbiomed = ["configs/*", "configs/**/*", "data/curation/*.sh", "resources/**/*"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["*.pyc", "**/__pycache__/*"]
+
+[tool.uv]
+conflicts = [
+    [
+        { extra = "pfns" },
+        { extra = "tabpfn-wide" },
+    ],
+    [
+        { extra = "analysis" },
+        { extra = "curation-singlecell" },
+    ],
+]

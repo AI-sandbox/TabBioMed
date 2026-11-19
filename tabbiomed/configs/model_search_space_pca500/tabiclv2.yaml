@@ -1,0 +1,19 @@
+extends: TabICLv2
+apply_pca:
+  type: categorical
+  choices: [true]
+pca_max_features:
+  type: categorical
+  choices: [500]
+pca_fit:
+  type: categorical
+  choices: [lowrank]
+pca_impute_missing:
+  type: categorical
+  choices: [true]
+pca_imputation_strategy:
+  type: categorical
+  choices: [mean]
+pca_cat_encoding:
+  type: categorical
+  choices: [label]

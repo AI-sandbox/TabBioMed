@@ -1,0 +1,46 @@
+{
+  "VitalDB": {
+    "group_by": "subjectid",
+    "stratify_by": "death_inhosp",
+    "train_size": 0.7,
+    "val_size": 0.15,
+    "test_size": 0.15,
+    "random_state": 42
+  },
+  "MUSIC": {
+    "stratify_by": "Cause of death",
+    "train_size": 0.7,
+    "val_size": 0.15,
+    "test_size": 0.15,
+    "random_state": 42
+  },
+  "HeartDisease_UCI": {
+    "stratify_by": "num",
+    "train_size": 0.7,
+    "val_size": 0.15,
+    "test_size": 0.15,
+    "random_state": 42
+  },
+  "PatientCare": {
+    "stratify_by": "SOURCE",
+    "train_size": 0.7,
+    "val_size": 0.15,
+    "test_size": 0.15,
+    "random_state": 42
+  },
+  "IACCD": {
+    "stratify_by": "day_28_flg",
+    "train_size": 0.7,
+    "val_size": 0.15,
+    "test_size": 0.15,
+    "random_state": 42
+  },
+  "Diabetes_UCI": {
+    "stratify_by": "readmitted_30",
+    "train_size": 0.7,
+    "val_size": 0.15,
+    "test_size": 0.15,
+    "random_state": 42
+  }
+}
+

@@ -1,0 +1,20 @@
+n_trials: 100
+trajectory_n_trials: 200
+hpo_evaluation_budgets:
+- 25
+- 50
+- 100
+- 200
+time_limit: 21600
+cv_time_limit_per_fold: 7200
+cv_outer_folds: 5
+cv_inner_folds: 3
+early_stopping_rounds: 50
+data_parallel: false
+batch_size: 256
+val_batch_size: 256
+optimize_optuna_with:
+  binary: roc_auc
+  classification: log_loss
+  regression: mse
+  multiregression: mse

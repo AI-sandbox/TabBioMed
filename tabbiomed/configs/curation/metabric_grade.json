@@ -1,0 +1,81 @@
+{
+  "name": "metabric_grade",
+  "protocol": "metabric_clinical_grade_expression_v1",
+  "source_revision": "86690e1ed9752b1dcd50b5657f5f05eafa4b6b78",
+  "source_url": "https://github.com/cBioPortal/datahub/tree/86690e1ed9752b1dcd50b5657f5f05eafa4b6b78/public/brca_metabric",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "publication_doi": "10.1038/nature10983",
+  "source_num_samples": 1980,
+  "num_samples": 1892,
+  "num_features": 20603,
+  "task": "classification",
+  "target_mapping": {
+    "0": "grade 1",
+    "1": "grade 2",
+    "2": "grade 3"
+  },
+  "class_counts": [
+    169,
+    771,
+    952
+  ],
+  "excluded_missing_grade": 88,
+  "missing_expression_cells": 13,
+  "X_values_sha256": "ee032f29a566742ca065097cbec93c8bbe202c3a6f41da0cd6dfb66b094e3b12",
+  "y_values_sha256": "4ac483cccc75d5caff07a00424ee2faee583812a8d7fe27c543af02003a883aa",
+  "sample_metadata_sha256": "29998349a446b5180a9a56a862c221c099979dec7cd0d50e7d737e312b2dac85",
+  "feature_metadata_sha256": "8c2325711ab789cafcefa67b0ca9cd068395764df2c5157bd153cbf08327fcc0",
+  "feature_names_sha256": "0680a06772683c39b47d0c660929031081a3aae0bef8b2526420ce2c68f29d0f",
+  "split_indices_sha256": "9eb9d647273090caca09c4ec059de9b1ebd0dc1c2dc08d1fd56d406db9bfc3d8",
+  "split_counts": {
+    "train": 1324,
+    "val": 284,
+    "test": 284
+  },
+  "files": {
+    "data_mrna_illumina_microarray": {
+      "filename": "data_mrna_illumina_microarray.txt",
+      "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/86690e1ed9752b1dcd50b5657f5f05eafa4b6b78/public/brca_metabric/data_mrna_illumina_microarray.txt",
+      "sha256": "4470069455a4ed38ffed5d12513e468bbf5b9a57d66fa1162e7bd9a64889ab7a"
+    },
+    "data_clinical_sample": {
+      "filename": "data_clinical_sample.txt",
+      "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/86690e1ed9752b1dcd50b5657f5f05eafa4b6b78/public/brca_metabric/data_clinical_sample.txt",
+      "sha256": "9a2291e065e2a0a5337b4eaeb09836e70b1bc3e1ed17714a013b53515697e6dc"
+    },
+    "data_clinical_patient": {
+      "filename": "data_clinical_patient.txt",
+      "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/86690e1ed9752b1dcd50b5657f5f05eafa4b6b78/public/brca_metabric/data_clinical_patient.txt",
+      "sha256": "2a6bbadc6e4b2b07c0505559d438da959fc5c9aba55c7194abc394e2d6454995"
+    },
+    "meta_mrna_illumina_microarray": {
+      "filename": "meta_mrna_illumina_microarray.txt",
+      "url": "https://raw.githubusercontent.com/cBioPortal/datahub/86690e1ed9752b1dcd50b5657f5f05eafa4b6b78/public/brca_metabric/meta_mrna_illumina_microarray.txt",
+      "sha256": "1a2a6ad6c31ea345e39d6b9c4dae36e5f8a1578cabbc86c2f0075a7649d1df31"
+    },
+    "meta_study": {
+      "filename": "meta_study.txt",
+      "url": "https://raw.githubusercontent.com/cBioPortal/datahub/86690e1ed9752b1dcd50b5657f5f05eafa4b6b78/public/brca_metabric/meta_study.txt",
+      "sha256": "e3520792252f2910c10cb9361f48a66beeaded678616173db9f455d9af1aa06b"
+    },
+    "Readme": {
+      "filename": "Readme.txt",
+      "url": "https://raw.githubusercontent.com/cBioPortal/datahub/86690e1ed9752b1dcd50b5657f5f05eafa4b6b78/public/brca_metabric/Readme.txt",
+      "sha256": "0f414b40c6da118c75900177552010582d81a4d6b00c5639396983c40716ce91"
+    },
+    "LICENSE": {
+      "filename": "LICENSE",
+      "url": "https://raw.githubusercontent.com/cBioPortal/datahub/86690e1ed9752b1dcd50b5657f5f05eafa4b6b78/public/brca_metabric/LICENSE",
+      "sha256": "aa607179437132751f7c8fcd9f2b4ed97677ded9812ad97b99abd380ae77aec2"
+    }
+  },
+  "notes": [
+    "Only source expression values enter X. Clinical grade is the target; no PAM50/IntClust labels or clinical predictors.",
+    "Source row IDs identify 20603 distinct measurements; repeated gene annotations are retained without merging.",
+    "Log2 microarray intensities are retained without cohort-reference Z-scoring; any additional preprocessing is fitted on training rows.",
+    "Sample and patient identifiers are retained only as metadata. All retained primary tumours have distinct patients.",
+    "The source ODbL notice applies to derived public dataset exports.",
+    "Independent METABRIC cohort; do not merge with TCGA MultiOmics_GS-BRCA."
+  ]
+}

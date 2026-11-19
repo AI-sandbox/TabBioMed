@@ -1,0 +1,18 @@
+max_depth:
+  type: int
+  low: 2
+  high: 12
+
+splitter:
+  type: categorical
+  choices: ["best", "random"]
+
+min_samples_split:
+  type: int
+  low: 2
+  high: 10
+
+min_samples_leaf:
+  type: int
+  low: 1
+  high: 10

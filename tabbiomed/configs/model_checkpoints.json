@@ -1,0 +1,57 @@
+{
+  "tabpfn_2_5": {
+    "repo_id": "Prior-Labs/tabpfn_2_5",
+    "revision": "6c45f3a6d0d07c6c5f62572e04a0c2929de91b8b",
+    "sha256": {
+      "tabpfn-v2.5-classifier-v2.5_default-2.ckpt": "2d0fbd257a5a274f2a219836d5a68e9c27224845936b4685d85dd42e2b8092aa",
+      "tabpfn-v2.5-classifier-v2.5_default.ckpt": "5d7170e2d3af01f9c501bb09ec3bd12e9944f8604de18002c647873c6ec04a12",
+      "tabpfn-v2.5-classifier-v2.5_large-features-L.ckpt": "76c2bd0730a817114b7644616fadb1bb21550ed5464f739f03dac4c0ef6d8668",
+      "tabpfn-v2.5-classifier-v2.5_large-features-XL.ckpt": "58a0fbbf753d68536d657bb51a5f6e33616dfbe00bad0b840ea64313d8bb72de",
+      "tabpfn-v2.5-classifier-v2.5_large-samples.ckpt": "befde2d3e86a1d3d2837cf3e08456a5f5fdb42ad3393e655ca49e310d6660ce2",
+      "tabpfn-v2.5-classifier-v2.5_real-large-features.ckpt": "714edb9e075a4deb0a9ac20df4831469fefa621c03157880b223da2d0a6ae89d",
+      "tabpfn-v2.5-classifier-v2.5_real-large-samples-and-features.ckpt": "5d7170e2d3af01f9c501bb09ec3bd12e9944f8604de18002c647873c6ec04a12",
+      "tabpfn-v2.5-classifier-v2.5_real.ckpt": "b403ee3947766675a0a7c2fd9c31ee41a9c8d080e8b5e30bb31707ed744be267",
+      "tabpfn-v2.5-classifier-v2.5_variant.ckpt": "080e324b082112548dc1bb2fba1d5b0bff22a4760574f85ff99bb94c879cb2c8",
+      "tabpfn-v2.5-regressor-v2.5_default.ckpt": "6e0308b7e5f3a8325b798b96d986b2b282c3608b1cda6e2991425a2a261d40b8",
+      "tabpfn-v2.5-regressor-v2.5_low-skew.ckpt": "b7b89cac8ef01c644b77c2140c52024e41e5458528746d38663b8e757e6432b7",
+      "tabpfn-v2.5-regressor-v2.5_quantiles.ckpt": "6dd4dbcdd5b991fde435ba5d59e4f6d170ec52110f5bb313ae8e972b88898044",
+      "tabpfn-v2.5-regressor-v2.5_real-variant.ckpt": "e69927623982d75454eaf2ecf0822d1b355e7bceb204331e46c203311b36463a",
+      "tabpfn-v2.5-regressor-v2.5_real.ckpt": "8ab42d2d0abe3886a2c54a336b2abf251658a23a9b3f6559c4fdf0c024f48e63",
+      "tabpfn-v2.5-regressor-v2.5_small-samples.ckpt": "fcdb61e0a6c82d6723d5404f2b6653e2543e2d9b9619b9b83bec988308fc22a3",
+      "tabpfn-v2.5-regressor-v2.5_variant.ckpt": "f0c24cd6e195f99f4ba853ba378587a19d8e81d8dfd6eb7491c3630063d10252"
+    }
+  },
+  "tabpfn_v2": {
+    "repo_id": "Prior-Labs/TabPFN-v2-clf",
+    "revision": "275f19d2add9c2c0de38f9ebaded3856599fa2e7",
+    "sha256": {
+      "tabpfn-v2-classifier-v2_default.ckpt": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49"
+    }
+  },
+  "tabpfn_wide": {
+    "urls": {
+      "tabpfn-wide-v2-1.5k-nocat.pt": "https://raw.githubusercontent.com/not-a-feature/TabPFN-Wide/27376d31b169afa01d4bf8e0cdaf0d01489caba6/tabpfnwide/models/tabpfn-wide-v2-1.5k-nocat.pt",
+      "tabpfn-wide-v2-1.5k.pt": "https://raw.githubusercontent.com/not-a-feature/TabPFN-Wide/27376d31b169afa01d4bf8e0cdaf0d01489caba6/tabpfnwide/models/tabpfn-wide-v2-1.5k.pt",
+      "tabpfn-wide-v2-5k-nocat.pt": "https://raw.githubusercontent.com/not-a-feature/TabPFN-Wide/27376d31b169afa01d4bf8e0cdaf0d01489caba6/tabpfnwide/models/tabpfn-wide-v2-5k-nocat.pt",
+      "tabpfn-wide-v2-5k.pt": "https://raw.githubusercontent.com/not-a-feature/TabPFN-Wide/27376d31b169afa01d4bf8e0cdaf0d01489caba6/tabpfnwide/models/tabpfn-wide-v2-5k.pt",
+      "tabpfn-wide-v2-8k-nocat.pt": "https://raw.githubusercontent.com/not-a-feature/TabPFN-Wide/27376d31b169afa01d4bf8e0cdaf0d01489caba6/tabpfnwide/models/tabpfn-wide-v2-8k-nocat.pt",
+      "tabpfn-wide-v2-8k.pt": "https://raw.githubusercontent.com/not-a-feature/TabPFN-Wide/27376d31b169afa01d4bf8e0cdaf0d01489caba6/tabpfnwide/models/tabpfn-wide-v2-8k.pt"
+    },
+    "sha256": {
+      "tabpfn-wide-v2-1.5k-nocat.pt": "a8ecde8086f978e4af0d11c676f380d36ab17566de6c51809a36d955ae26ba90",
+      "tabpfn-wide-v2-1.5k.pt": "4795324efbd60ff77efa2cfc938e149227640029c6fc3589183f4359a38f1a06",
+      "tabpfn-wide-v2-5k-nocat.pt": "eee25d7b373d30528a6a608efe7906eed86e4d890ca65b946e55fa83960eef66",
+      "tabpfn-wide-v2-5k.pt": "b6f67c4abb9d7bb1fc1a57514848401bbe6326b7aae7fd050621687eac7be01b",
+      "tabpfn-wide-v2-8k-nocat.pt": "3d6d28ee3b773e82f02901bf798319eb60a6c745afb08d366e41b36d78cd0142",
+      "tabpfn-wide-v2-8k.pt": "cc507c6e369d01dab4b843354b5967111170baa554d0f4695f8d1d1c943f6102"
+    }
+  },
+  "hyperfast": {
+    "urls": {
+      "hyperfast.ckpt": "https://ndownloader.figshare.com/files/43484094"
+    },
+    "sha256": {
+      "hyperfast.ckpt": "a972580b96a00e11954f604f4544f2c6d46dbfdc98462c213c93ec332b4334ed"
+    }
+  }
+}

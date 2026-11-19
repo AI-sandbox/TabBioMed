@@ -1,0 +1,3 @@
+scaler:
+  type: categorical
+  choices: ['standard']

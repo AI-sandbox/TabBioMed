@@ -1,0 +1,15 @@
+alpha:
+  type: float
+  low: 0.00000001
+  high: 1.0
+  log: true
+
+l1_ratio:
+  type: float
+  low: 0.0
+  high: 1.0
+  log: false
+
+scaler:
+  type: categorical
+  choices: ['standard', 'quantile']

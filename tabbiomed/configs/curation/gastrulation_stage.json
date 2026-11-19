@@ -1,0 +1,97 @@
+{
+  "dataset": "sc_gastrulation_stage",
+  "protocol": "gastrulation_day_pool_holdout_v1",
+  "source_url": "https://ndownloader.figshare.com/files/28095525",
+  "source_sha256": "dd8e53a97e99b8fb4cb3053d256b897cc56fd9596301d18e87bf7fb839107b2a",
+  "source_shape": [
+    89267,
+    53801
+  ],
+  "publication_doi": "10.1038/s41586-019-0933-9",
+  "sample_metadata_source": "https://bioconductor.org/packages/3.23/data/experiment/src/contrib/MouseGastrulationData_1.26.0.tar.gz",
+  "sample_metadata_package_sha256": "eb2509c3adf1ed3fa0273a9d901830efcdc02c44c57057375aa5308b2e795642",
+  "sample_metadata_R_sha256": "4ad1ca028ad303108f505eb09f5f5ba25926e70e74210208e35221dd6893ed91",
+  "sample_map_sha256": "4f17664b8417541a28d2923e8edf429eb1dff4c35bc018e670e5f5323384f2c0",
+  "seed": 42,
+  "split_sizes": {
+    "train": 7000,
+    "val": 1500,
+    "test": 1500
+  },
+  "feature_selection": {
+    "method": "analytic_pearson_residual_variance",
+    "theta": 100,
+    "clip": "sqrt(n_train)",
+    "n_features": 10000,
+    "fit_partition": "train"
+  },
+  "prepared_sha256": {
+    "sample_metadata.csv": "d704c03a1bb40dbca6d900065e905e6ce7be41df5845dd58a5f90b60ac38d6e3",
+    "feature_names.json": "d6662de5d7934625d31491b0a0bf1f4c7ecd06d1fa554687fff1bbfcea0a1192",
+    "split_indices.npy": "49e77e4db125b4457913bde264cbf7bcf989bfa1285fd4d570066358dbb782f1",
+    "X.npy": "f8f2f14c315e5bc328667446e2b75cab5484d0c14ac23fc7bcf71ad8932cc6b9",
+    "feature_metadata.csv": "a12331b681295fa8421c7c24b5b99090df3904abfb52aa7a0890c634aad9a6ab",
+    "y.npy": "1319ca8c6bb156cb87a4ceebbaf9b72ee0e28d75be9f75cf1809cf74a5a0d85c"
+  },
+  "pools_by_partition": {
+    "test": [
+      5,
+      6,
+      11,
+      21,
+      23,
+      26
+    ],
+    "train": [
+      1,
+      3,
+      4,
+      7,
+      8,
+      12,
+      14,
+      16,
+      19,
+      20,
+      22,
+      24
+    ],
+    "val": [
+      2,
+      9,
+      13,
+      15,
+      18,
+      25
+    ]
+  },
+  "stage_counts_by_partition": {
+    "test": {
+      "6.5": 51,
+      "7.0": 513,
+      "7.5": 74,
+      "7.75": 451,
+      "8.25": 229,
+      "8.5": 182
+    },
+    "train": {
+      "6.5": 34,
+      "6.75": 179,
+      "7.0": 264,
+      "7.25": 1145,
+      "7.5": 724,
+      "7.75": 422,
+      "8.0": 1413,
+      "8.25": 1525,
+      "8.5": 1294
+    },
+    "val": {
+      "6.5": 236,
+      "7.0": 186,
+      "7.25": 125,
+      "7.5": 27,
+      "8.0": 491,
+      "8.5": 435
+    }
+  }
+}

@@ -1,0 +1,10 @@
+extends: TabPFNv2.5
+apply_pca:
+  type: categorical
+  choices: [true]
+pca_max_features:
+  type: categorical
+  choices: [500]
+pca_fit:
+  type: categorical
+  choices: [lowrank]

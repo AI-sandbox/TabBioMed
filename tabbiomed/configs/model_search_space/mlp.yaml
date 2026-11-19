@@ -1,0 +1,39 @@
+# search space adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/nn_torch/hpo.py
+hidden_dim:
+  type: int
+  low: 8
+  high: 256
+
+activation:
+  type: categorical
+  choices: ['relu', 'elu']
+
+n_layers:
+  type: int
+  low: 1
+  high: 5
+
+learning_rate:
+  type: float
+  low: 0.0005
+  high: 0.001
+  log: True
+
+weight_decay:
+  type: float
+  low: 1e-12
+  high: 0.1
+  log: True
+
+dropout_rate:
+  type: float
+  low: 0.0
+  high: 0.4
+
+use_batch_norm:
+  type: categorical
+  choices: [True, False]
+
+scaler:
+  type: categorical
+  choices: ['standard', 'quantile']

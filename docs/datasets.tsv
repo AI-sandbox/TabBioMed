@@ -1,0 +1,95 @@
+dataset	task	samples	features	curator	source
+avida_hil6_onehot	binary	29995	193	avida	COGNANO AVIDa datasets (HuggingFace: cognano/AVIDa-hIL6, cognano/AVIDa-hTNFa, cognano/AVIDa-SARS-CoV-2). VHH (nanobody) sequences with binary binding labels against antigen variants.
+avida_htnfa_onehot	binary	5580	150	avida	COGNANO AVIDa datasets (HuggingFace: cognano/AVIDa-hIL6, cognano/AVIDa-hTNFa, cognano/AVIDa-SARS-CoV-2). VHH (nanobody) sequences with binary binding labels against antigen variants.
+avida_htnfa_3mer	binary	5580	5000	avida	COGNANO AVIDa datasets (HuggingFace: cognano/AVIDa-hIL6, cognano/AVIDa-hTNFa, cognano/AVIDa-SARS-CoV-2). VHH (nanobody) sequences with binary binding labels against antigen variants.
+true_melting_point	regression	12144	480	true-protein	InstaDeepAI/true-cds-protein-tasks (Hugging Face). Original data from the Thermostability Atlas (mass spectrometry-based proteomics). Splits follow the 'mixed' split strategy from FLIP: sequences clustered at 20% identity, 80% of clusters assigned to train and 20% to test.
+true_fluorescence	regression	51738	3068	true-protein	InstaDeepAI/true-cds-protein-tasks (Hugging Face). Original data from Sarkisyan et al. , experimental study of the avGFP fitness landscape via random mutagenesis synthesized in E. coli. Split follows TAPE/PEER: train on sequences with ≤3 mutations from parent GFP, test on sequences with ≥4 mutations.
+cptac_histology	binary	101	12592	cptac	CPTAC (Clinical Proteomic Tumor Analysis Consortium). Proteomics data from the UCEC (Uterine Corpus Endometrial Carcinoma) cohort, measured at University of Michigan (umich). Clinical labels from the MSSM (Icahn School of Medicine at Mount Sinai) annotation.
+avida_htnfa_esm2	binary	5580	480	avida	COGNANO AVIDa datasets (HuggingFace: cognano/AVIDa-hIL6, cognano/AVIDa-hTNFa, cognano/AVIDa-SARS-CoV-2). VHH (nanobody) sequences with binary binding labels against antigen variants.
+proteinea_solubility	binary	71421	8000	proteinea	proteinea/solubility (Hugging Face). Binary protein solubility prediction dataset. Labels indicate whether a protein is soluble (1) or insoluble (0). Separate train, validation and test CSV files.
+avida_sarscov2_3mer	binary	26979	7072	avida	COGNANO AVIDa datasets (HuggingFace: cognano/AVIDa-hIL6, cognano/AVIDa-hTNFa, cognano/AVIDa-SARS-CoV-2). VHH (nanobody) sequences with binary binding labels against antigen variants.
+true_betalactamase_unique	regression	5128	480	true-protein	InstaDeepAI/true-cds-protein-tasks (Hugging Face). Original data from Firnberg et al. , systematic fitness landscape of all single codon mutations in the TEM-1 Beta-lactamase gene synthesized in E. coli. Fitness measured as a weighted average of allele counts over ampicillin-concentration plates, normalised by WT fitness.
+SMK_CAN_187	binary	187	19993	scikit-feature	scikit-feature
+Prostate_GE	binary	102	5966	scikit-feature	scikit-feature
+GLIOMA	classification	50	4434	scikit-feature	scikit-feature
+GLI_85	binary	85	22283	scikit-feature	scikit-feature
+ALLAML	binary	72	7129	scikit-feature	scikit-feature
+CLL_SUB_111	classification	111	11340	scikit-feature	scikit-feature
+lung	classification	203	3312	scikit-feature	scikit-feature
+TOX_171	classification	171	5748	scikit-feature	GEO_GDS968_GSE1725
+MultiOmics_GS-BRCA	classification	671	15200	multiomics	TabPFN-Wide MLOmics GS-BRCA dataset
+MultiOmics_GS-GBM	classification	244	14640	multiomics	TabPFN-Wide MLOmics GS-GBM dataset
+MultiOmics_GS-COAD	classification	260	15200	multiomics	TabPFN-Wide MLOmics GS-COAD dataset
+MultiOmics_GS-OV	classification	284	13501	multiomics	TabPFN-Wide MLOmics GS-OV dataset
+MultiOmics_GS-LGG	classification	247	13242	multiomics	MLOmics GS-LGG with TCGA/Xena HumanMethylation450
+dna	classification	3000	180	talent	Talent Benchmark Dataset - dna
+continental_50k_missing	classification	3309	25921	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Continental labels (Super-Populations: EUR, AFR, EAS, SAS, AMR) were obtained from the harmonized gnomAD v3.1 sample metadata.
+sexcheck_chrX_500	binary	4026	441	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Labels were obtained from 1KG and International Genome Sample Resource (IGSR) with the respective links:         https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20250704.ALL.ped and https://www.internationalgenome.org/data-portal/data-collection/HGDP
+coords_50k	multiregression	3309	39969	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Geographical coordinates (latitude and longitude) were obtained from the harmonized gnomAD v3.1 sample metadata.
+subpop_1000_consec	classification	2501	678	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Fine-grained subpopulation labels (e.g., GBR, CHB, YRI) were obtained from the harmonized gnomAD v3.1 sample metadata.
+subpop_50k	classification	2501	32339	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Fine-grained subpopulation labels (e.g., GBR, CHB, YRI) were obtained from the harmonized gnomAD v3.1 sample metadata.
+pca_50k	multiregression	2609	34635	genomics	Chromosome data was downloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         PCA coordinates were computed utilizing the 300,000 most informative SNPs from chromosomes chr1-chr22. 
+sexcheck_chrX_50k	binary	12078	17118	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Labels were obtained from 1KG and International Genome Sample Resource (IGSR) with the respective links:         https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20250704.ALL.ped and https://www.internationalgenome.org/data-portal/data-collection/HGDP
+pca_1k	multiregression	2609	707	genomics	Chromosome data was downloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         PCA coordinates were computed utilizing the 300,000 most informative SNPs from chromosomes chr1-chr22. 
+sexcheck_chrX_50	binary	4026	45	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Labels were obtained from 1KG and International Genome Sample Resource (IGSR) with the respective links:         https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20250704.ALL.ped and https://www.internationalgenome.org/data-portal/data-collection/HGDP
+continental_50k	classification	3309	39969	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Continental labels (Super-Populations: EUR, AFR, EAS, SAS, AMR) were obtained from the harmonized gnomAD v3.1 sample metadata.
+continental_1k	classification	3309	806	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Continental labels (Super-Populations: EUR, AFR, EAS, SAS, AMR) were obtained from the harmonized gnomAD v3.1 sample metadata.
+tahoe_cell_name_500	classification	21426	500	tahoe	ARC Institute - Tahoe-100M (2025).
+sc_muris_celltype	classification	1817	16472	singlecell	Tabula Muris Consortium (2020), Tabula Muris Senis kidney Smart-seq2 via scUnified
+sc_gastrulation_stage	regression	10000	10000	gastrulation	Pijuan-Sala et al. (2019), mouse gastrulation atlas via scVelo
+tahoe_cell_name_5000	classification	21426	5000	tahoe	ARC Institute - Tahoe-100M (2025).
+sc_muraro_celltype	classification	2119	18508	singlecell	Muraro et al. (2016), human pancreas CEL-Seq2 via scUnified
+tahoe_cell_name_1000	classification	21426	1000	tahoe	ARC Institute - Tahoe-100M (2025).
+sc_muris_age	classification	1817	16436	singlecell	Tabula Muris Consortium (2020), Tabula Muris Senis kidney Smart-seq2 via scUnified
+hnoca_cells30	classification	100000	22000	hnoca	He et al. (2024), Human Neural Organoid Cell Atlas (HNOCA), hnoca_cleaned.h5ad downloaded from https://zenodo.org/records/14161275.
+tahoe_g2m_score	regression	21426	5000	tahoe	ARC Institute - Tahoe-100M (2025).
+tahoe_batch_integration_14plates	classification	28000	5000	tahoe	ARC Institute - Tahoe-100M (2025).
+ST000496	binary	100	69	metabolomics	CIMBC/MetabComparisonBinaryML
+ST000369	binary	80	181	metabolomics	CIMBC/MetabComparisonBinaryML
+MTBLS161	binary	59	29	metabolomics	CIMBC/MetabComparisonBinaryML
+Gum1_s	regression	267	167	vocs	On the use of TabPFN on mass spectrometry analysis of volatile organic compounds. Scientific Reports (2025). GitHub: https://github.com/CIFASIS/TabPFN-VOCS
+PT-Mush21	classification	593	383	vocs	On the use of TabPFN on mass spectrometry analysis of volatile organic compounds. Scientific Reports (2025). GitHub: https://github.com/CIFASIS/TabPFN-VOCS
+MTBLS404	binary	184	120	metabolomics	CIMBC/MetabComparisonBinaryML
+ST001047	binary	83	52	metabolomics	CIMBC/MetabComparisonBinaryML
+MTBLS136	binary	668	915	metabolomics	CIMBC/MetabComparisonBinaryML
+Noc_s	regression	72	380	vocs	On the use of TabPFN on mass spectrometry analysis of volatile organic compounds. Scientific Reports (2025). GitHub: https://github.com/CIFASIS/TabPFN-VOCS
+ST001000	binary	121	2177	metabolomics	CIMBC/MetabComparisonBinaryML
+QM9_g298	regression	131970	841	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+QM8_E1-CC2	regression	21747	676	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+Tox21_NRAhR	binary	6542	1024	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+SIDER_nervous	binary	1427	2018	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+vep_pathogenic_coding	binary	37166	98	rna	InstaDeepAI/genomics-long-range-benchmark (Hugging Face), task variant_effect_pathogenic (ClinVar, coding SNVs): ClinVar pathogenic variants vs gnomAD v3.1.2 common variants (MAF > 5%, AN >= 25,000) (Kao et al., 2024). Sequence context from the UCSC hg38 (GRCh38) reference genome.
+HIV	binary	41120	1024	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+QM9_gap	regression	131970	841	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+ESOL	regression	1128	1563	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+QM8_f1-CC2	regression	21747	676	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+SIDER_gastro	binary	1427	2018	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+Tox21_SRMMP	binary	5804	1024	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+Tox21_NRER	binary	6186	1024	moleculenet	MoleculeNet (https://moleculenet.org) , loaded via DeepChem.
+bioresponse	binary	3751	1773	rna	OpenML/UCI
+QSAR_biodegradation	binary	1051	41	talent	Talent Benchmark Dataset - QSAR_biodegradation
+Parkinson_Speech	binary	1040	26	parkinson-speech	Parkinson's Speech with Multiple Types of Sound Recordings dataset in UC Irvine ML repository, at https://archive.ics.uci.edu/dataset/301/c+speech+dataset+with+multiple+types+of+sound+recordings
+National_Health_and_Nutrition_Health_Survey	binary	2278	7	talent	Talent Benchmark Dataset - National_Health_and_Nutrition_Health_Survey
+ecoli	classification	327	5	pmlb	PMLB (ecoli), verified against original UCI release
+IACCD	binary	1776	34	iaccd	PhysioNet mimic2-iaccd v1.0
+metabric_grade	classification	1892	20603	metabric	METABRIC / cBioPortal (Curtis et al., 2012)
+audiology	binary	199	69	openml	OpenML_Dataset_ID_999
+wisconsin-breast-cancer	binary	569	30	openml	OpenML_Dataset_ID_1510
+HeartDisease_UCI	binary	920	13	heart-disease	UCI Heart Disease
+PatientCare	binary	4412	10	patientcare	Mendeley - PatientCare
+Diabetic_Retinopathy_Debrecen	binary	1151	19	talent	Talent Benchmark Dataset - Diabetic_Retinopathy_Debrecen
+dermatology	classification	366	34	pmlb	PMLB (dermatology), verified against original UCI release
+sick	binary	3772	27	openml	OpenML_Dataset_ID_38
+MUSIC	classification	961	65	music	MUSIC
+CDC_Diabetes_Health_Indicators	binary	226342	21	talent	Talent Benchmark Dataset - CDC_Diabetes_Health_Indicators
+ilpd_patient_data	binary	583	10	openml	OpenML_Dataset_ID_1480
+blood-transfusion-service	binary	471	3	openml	OpenML_Dataset_ID_1464
+thyroid	classification	7200	20	talent	Talent Benchmark Dataset - thyroid
+Diabetes_UCI	binary	69973	40	diabetes	UCI Diabetes
+spectf	binary	267	44	pmlb	PMLB (spectf), verified against original UCI release
+coords_1k	multiregression	3309	806	genomics	Chromosome data was dowloaded from GnomAD v3.1.2 - 1KG + HGDP callset: https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg.         Geographical coordinates (latitude and longitude) were obtained from the harmonized gnomAD v3.1 sample metadata.
+maternal_health_risk	classification	381	6	talent	Talent Benchmark Dataset - maternal_health_risk
+pima_diabetes	binary	768	8	openml	OpenML_Dataset_ID_37
+Cardiovascular-Disease-dataset	binary	68606	11	talent	Talent Benchmark Dataset - Cardiovascular-Disease-dataset
+lymphography	binary	142	18	openml	OpenML_Dataset_ID_10
+VitalDB	binary	6388	57	vitaldb	VitalDB

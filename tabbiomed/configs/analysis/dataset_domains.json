@@ -1,0 +1,34 @@
+[
+  {
+    "domain": "clinical & healthcare",
+    "display_tex": "Clinical \\& Healthcare"
+  },
+  {
+    "domain": "Drug Discovery",
+    "display_tex": "\\makecell[l]{Drug Discovery and\\\\Molecular Properties}"
+  },
+  {
+    "domain": "genomics",
+    "display_tex": "Genomics"
+  },
+  {
+    "domain": "Metabolomics",
+    "display_tex": "Metabolomics"
+  },
+  {
+    "domain": "Proteomics",
+    "display_tex": "Proteomics"
+  },
+  {
+    "domain": "Single-Cell",
+    "display_tex": "Single-cell"
+  },
+  {
+    "domain": "systems biology",
+    "display_tex": "Systems Biology"
+  },
+  {
+    "domain": "transcriptomics",
+    "display_tex": "Transcriptomics"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "dataset": "sexcheck_chrX_50",
+  "protocol": "sexcheck_individual_fixed_v1",
+  "seed": 42,
+  "num_individuals": 4026,
+  "num_rows": 4026,
+  "copies_per_individual": 1,
+  "synthetic_missingness": 0.0,
+  "observed_genotypes_verified": 182528,
+  "arrays": {
+    "unified_format": {
+      "shape": [
+        4026,
+        50
+      ],
+      "X.npy": "3aabcfe1ab826220ee9817b34c66b541e479711b03d821a7c2e685f15c72cb33",
+      "y.npy": "66145b469960b0904ff5b60c21d6042b717ec66758eb28ad3d0ceb8ef0ce10b5"
+    },
+    "processed": {
+      "shape": [
+        4026,
+        45
+      ],
+      "X.npy": "4806547272e4d3869edd69029e916d69fe6fee31a1f8b121fb5b26713c269822",
+      "y.npy": "dc31151f362e26957219908497658fd343b86618e52b107f725d7fd4195c3b4a"
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 2818,
+      "individuals": 2818,
+      "class_counts": [
+        1504,
+        1314
+      ]
+    },
+    "val": {
+      "rows": 604,
+      "individuals": 604,
+      "class_counts": [
+        322,
+        282
+      ]
+    },
+    "test": {
+      "rows": 604,
+      "individuals": 604,
+      "class_counts": [
+        323,
+        281
+      ]
+    }
+  },
+  "mapping_sha256": "ef86b8538eebd117a9944f3708bcd13bda4057fde6d9a49ce18345a3a912bcab",
+  "source_sha256": {
+    "raw/1KG/chrX_50.pgen": "3e409e224d83d14f50ba38a03f51fb9bdc28973d8a4897cd21327807da338204",
+    "raw/1KG/chrX_50.psam": "f880c86be28b29ecbf8c3da71c8f6ce1acbcfdbfc7549c0cc4059c2f7e52cf57",
+    "raw/1KG/labels/integrated_call_samples_v3.20250704.ALL.ped": "02c5f7a2a706fe944bb46642f73f0cd99fb8cb22e35ae717589c3317efd50e57",
+    "raw/1KG/labels/igsr_HGDP_projct_samples.tsv": "a29087aa164e5dba98b9b6ee153ef88d99c70c613742481734d0cb4076c8153d"
+  },
+  "split_sha256": "ecc51cf786b2fc64a5e2bd4409669bf45ab859177035cf5bdeb9f50d087f35d8"
+}

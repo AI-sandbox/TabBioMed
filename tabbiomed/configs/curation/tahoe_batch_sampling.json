@@ -1,0 +1,28 @@
+{
+  "dataset": "tahoe_batch_integration_14plates",
+  "bit_generator_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 275746040736049858933357498240924190836,
+      "inc": 332724090758049132448979897138935081983
+    },
+    "has_uint32": 0,
+    "uinteger": 189328741
+  },
+  "plate_rows": {
+    "plate1": 5481420,
+    "plate2": 8064658,
+    "plate3": 4705402,
+    "plate4": 7004356,
+    "plate5": 6419498,
+    "plate6": 7545393,
+    "plate7": 5692117,
+    "plate8": 8880979,
+    "plate9": 5866669,
+    "plate10": 8044908,
+    "plate11": 7435869,
+    "plate12": 10487057,
+    "plate13": 8501658,
+    "plate14": 6518806
+  }
+}

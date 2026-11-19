@@ -1,0 +1,34 @@
+{
+  "dataset": "pima_diabetes",
+  "protocol": "pima_zero_as_missing_v1",
+  "source_url": "https://www.openml.org/d/37",
+  "source_sha256": "4eddd5b2b64679e8888348e306520a393d6a28e1ddc9643cfb76fc5d912d6d40",
+  "feature_names": [
+    "preg",
+    "plas",
+    "pres",
+    "skin",
+    "insu",
+    "mass",
+    "pedi",
+    "age"
+  ],
+  "numeric_X_sha256": "5d5b9bccaffd1cdb628f369f337117c552b4e922ad70a0f11359771d9b6afd9e",
+  "y_sha256": "a0b5a5fee94f6c6e6ba016f185aa19bb236eb436f2250ff96ea3cde0f0b8055a",
+  "split_sha256": "f30d9c2f87c2c8c8b35af63b854fc1b4604fb937f972647c42fddfcba22bb827",
+  "split_sizes": {
+    "train": 538,
+    "val": 115,
+    "test": 115
+  },
+  "missing_by_feature": {
+    "preg": 0,
+    "plas": 5,
+    "pres": 35,
+    "skin": 227,
+    "insu": 374,
+    "mass": 11,
+    "pedi": 0,
+    "age": 0
+  }
+}

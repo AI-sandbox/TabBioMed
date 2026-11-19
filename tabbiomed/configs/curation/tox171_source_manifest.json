@@ -1,0 +1,15 @@
+{
+  "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/datasets/GDSnnn/GDS968/soft/GDS968.soft.gz",
+  "source_sha256": "2eff38c55d69aacbd2a725e175249504d20b8b3d2646447a28d7174be847cf1a",
+  "source_accession": "GDS968",
+  "source_series": "GSE1725",
+  "publication_doi": "10.1073/pnas.0307761101",
+  "raw_mat_sha256": "f52f57e61775b7830c84750456d7fadfd220d1cc8eed26419c3390eb9216cc84",
+  "mapping_sha256": "3c55970c2b79253e671c4346dc3ba95fe14256e66b94a618ac7a571ccc5427a4",
+  "X_values_sha256": "067c47f7e51d01ed58d4ace1648eb91f1e595e3c17cba1f7393fb5199df73cc0",
+  "encoded_y_values_sha256": "021fb2fcf37f4f419ae8720708a512351a9f8631fecc3b501e87a6da313627f7",
+  "matched_genes": 5594,
+  "matched_samples": 171,
+  "exactly_equal_expression_cells": 956574,
+  "max_abs_difference": 0.0
+}

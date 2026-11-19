@@ -1,0 +1,357 @@
+{
+  "datasets": {
+    "avida_hil6_onehot": {
+      "recorded_split_sha256": "b6f9b6b867f48ecc0b983862e857e3d4b0daf7499c524f56c229fa5dd089a2ee"
+    },
+    "avida_htnfa_onehot": {
+      "recorded_split_sha256": "771899fcefb4b79a52ca15fd75f818d545568948dc47a2788497f32cc9b1caae"
+    },
+    "avida_htnfa_3mer": {
+      "recorded_split_sha256": "771899fcefb4b79a52ca15fd75f818d545568948dc47a2788497f32cc9b1caae"
+    },
+    "true_melting_point": {
+      "recorded_split_sha256": "a40b0bf8bc7e188a8644dacecff8eeeddabf36959073edb7c777a039b1e5dbdc"
+    },
+    "true_fluorescence": {
+      "recorded_split_sha256": "16b25aebee187aae29936f733adfaa52a9284522752f7d5bf9d99d83e506e61a"
+    },
+    "cptac_histology": {
+      "recorded_split_sha256": "7ccb218713356432c1ac58ce6bdfff7498f7eb711250eda8de19d5c6b2a54e25"
+    },
+    "avida_htnfa_esm2": {
+      "recorded_split_sha256": "771899fcefb4b79a52ca15fd75f818d545568948dc47a2788497f32cc9b1caae"
+    },
+    "proteinea_solubility": {
+      "recorded_split_sha256": "b2d275df70274b157f0511d2e06eac9aa17be1e7ba96442511d18820bc9bedd7"
+    },
+    "avida_sarscov2_3mer": {
+      "recorded_split_sha256": "8faafb1e8f230682767040892d1100239a0bc4ac05e774b40f3040ae0f83748c"
+    },
+    "true_betalactamase_unique": {
+      "recorded_split_sha256": "a98de0fb3dad199019ab814a8c3517c503430f70ea284e8f2b89ad48034139c3"
+    },
+    "SMK_CAN_187": {
+      "recorded_split_sha256": "338cabb98c0e943195ec22f71926db021f9edfe58577f094592dc3378e657344"
+    },
+    "Prostate_GE": {
+      "recorded_split_sha256": "981f40d7738d284fba5365d5f994334e11e3b9a322512ca1139b263918cee4f6"
+    },
+    "GLIOMA": {
+      "recorded_split_sha256": "1d8b4f0bde023dc44e99cfbb03bbc22467ae69d539a09ae9f7d368843cc29294"
+    },
+    "GLI_85": {
+      "recorded_split_sha256": "a85fee8190047886312183a89c30304c28ea03e50c5e415111142be637b51ed4"
+    },
+    "ALLAML": {
+      "recorded_split_sha256": "72aef45e0243179547ef1c4c374dbd8d829110b0404a0c0b3139aa06d3eef3c4"
+    },
+    "CLL_SUB_111": {
+      "recorded_split_sha256": "791c4549f4ebd075661a087d02c80c96dc464cc04b86fc978cef862f74902c26"
+    },
+    "lung": {
+      "recorded_split_sha256": "16b0426c18a7e4e04b44e2119a171d8f26865da43a32176f65a4fd7c16c322d4"
+    },
+    "TOX_171": {
+      "recorded_split_sha256": "30d9f1da889f845cf9fcc80593cb72d3574a8228e08f936adcfebd688e00a3f8"
+    },
+    "MultiOmics_GS-BRCA": {
+      "recorded_split_sha256": "69797a786ef56efbf765e564bb31fe0bb7bd175a3b8ede07c29f50748f3d438c"
+    },
+    "MultiOmics_GS-GBM": {
+      "recorded_split_sha256": "83f4dbdf5d2a5b0b1e0877d6e1427a8504783ecb5a9fa0c97eba17376ed76392"
+    },
+    "MultiOmics_GS-COAD": {
+      "recorded_split_sha256": "81cd29a4e218e4a4054939280e64df783b4ed5bf09b0c17ececeb91c6c743b79"
+    },
+    "MultiOmics_GS-OV": {
+      "recorded_split_sha256": "181baa4baaaac2de36645d65c335b871feff9d1cf77ab7f12666ad3e9fbe6242"
+    },
+    "MultiOmics_GS-LGG": {
+      "recorded_split_sha256": "57efdf73e0c3bba428568211d857f440efa496da913f5c688427bc4cc0eb6dc9"
+    },
+    "dna": {
+      "recorded_split_sha256": "a64fbe9e629a610b72ac28e6e54375b2fe44ff8d7adebebdc65ca0873d615e5b"
+    },
+    "continental_50k_missing": {
+      "recorded_split_sha256": "18a6ad2fabd6b6efb6c1566039b24b97a486c0390b46d98e54c9897fa069d540"
+    },
+    "sexcheck_chrX_500": {
+      "recorded_split_sha256": "ecc51cf786b2fc64a5e2bd4409669bf45ab859177035cf5bdeb9f50d087f35d8"
+    },
+    "coords_50k": {
+      "recorded_split_sha256": "18a6ad2fabd6b6efb6c1566039b24b97a486c0390b46d98e54c9897fa069d540"
+    },
+    "subpop_1000_consec": {
+      "recorded_split_sha256": "1307ae6617be8b514e122fa6e64edbe98139ebf7c526950fc0f72e389cd82661"
+    },
+    "subpop_50k": {
+      "recorded_split_sha256": "1307ae6617be8b514e122fa6e64edbe98139ebf7c526950fc0f72e389cd82661"
+    },
+    "pca_50k": {
+      "recorded_split_sha256": "e97d0968fee4c283c01211073c4cd887caa0aaa26ed06a811c422d3f196a9f5a"
+    },
+    "sexcheck_chrX_50k": {
+      "recorded_split_sha256": "5493b28c87a6cb76e77e6a10acf3fae87d3ea291ccdf0cdb0c5d00011ccd3f0e"
+    },
+    "pca_1k": {
+      "recorded_split_sha256": "e97d0968fee4c283c01211073c4cd887caa0aaa26ed06a811c422d3f196a9f5a"
+    },
+    "sexcheck_chrX_50": {
+      "recorded_split_sha256": "ecc51cf786b2fc64a5e2bd4409669bf45ab859177035cf5bdeb9f50d087f35d8"
+    },
+    "continental_50k": {
+      "recorded_split_sha256": "18a6ad2fabd6b6efb6c1566039b24b97a486c0390b46d98e54c9897fa069d540"
+    },
+    "continental_1k": {
+      "recorded_split_sha256": "18a6ad2fabd6b6efb6c1566039b24b97a486c0390b46d98e54c9897fa069d540"
+    },
+    "tahoe_cell_name_500": {
+      "recorded_split_sha256": "01c0d62ef330120aec0045fa97d6975e98b33c463f5995e03d908b40855b914b"
+    },
+    "sc_muris_celltype": {
+      "recorded_split_sha256": "82550a584c62dd6937e084ab1c36fd3d32f915059bd0bb6b32459c5cda92f851"
+    },
+    "sc_gastrulation_stage": {
+      "recorded_split_sha256": "49e77e4db125b4457913bde264cbf7bcf989bfa1285fd4d570066358dbb782f1"
+    },
+    "tahoe_cell_name_5000": {
+      "recorded_split_sha256": "01c0d62ef330120aec0045fa97d6975e98b33c463f5995e03d908b40855b914b"
+    },
+    "sc_muraro_celltype": {
+      "recorded_split_sha256": "95c04781cd448a10f595d4e65b369e9c77806ca604c1468efbf1e6fb52b0facb"
+    },
+    "tahoe_cell_name_1000": {
+      "recorded_split_sha256": "01c0d62ef330120aec0045fa97d6975e98b33c463f5995e03d908b40855b914b"
+    },
+    "sc_muris_age": {
+      "recorded_split_sha256": "a07075f322dea2669082c980690683de23965d445831250413377f66b6ad9d5a"
+    },
+    "hnoca_cells30": {
+      "recorded_split_sha256": "12213e69ac098268198e677476e7ad124cb41afdbc174e12647e8d5f55b12db0"
+    },
+    "tahoe_g2m_score": {
+      "recorded_split_sha256": "01c0d62ef330120aec0045fa97d6975e98b33c463f5995e03d908b40855b914b"
+    },
+    "tahoe_batch_integration_14plates": {
+      "recorded_split_sha256": "adbd50433ef82a93b03e1a393db9892eba62de1de0766db0c44f0ee4845bb83a"
+    },
+    "ST000496": {
+      "recorded_split_sha256": "6b59848cf938521d23ab5589b802d12f365077dc9deaafc6e1d8353a544d037e"
+    },
+    "ST000369": {
+      "recorded_split_sha256": "59e993e67441f4ff673d7aefc4066820a83fd805ada59962d71790cc0bb02e81"
+    },
+    "MTBLS161": {
+      "recorded_split_sha256": "828f403e148f75fa26b81a8730bf42e929f663b64d9d7dbd45f019e68143afcc"
+    },
+    "Gum1_s": {
+      "recorded_split_sha256": "f69f582e4b9e78820d9039e741d62adeb9451d32c1d9ebe16c705ad26a2b5c41"
+    },
+    "PT-Mush21": {
+      "recorded_split_sha256": "0cb9585d6e17b4135aa29b584caca3e45039a38dfd456f3643708a355177fed0"
+    },
+    "MTBLS404": {
+      "recorded_split_sha256": "b6bfd5345c724d07e149018c475e6970f1ccf73dde40a742a07c39a795268261"
+    },
+    "ST001047": {
+      "recorded_split_sha256": "652767e62c5770cb09480b0215dd5dec0ed11e6291b8f2a8c08eca8582bcac8a"
+    },
+    "MTBLS136": {
+      "recorded_split_sha256": "39f8b8a925c96bae10a4520e6302993137961c0c2797dac105547421ba5c5f53"
+    },
+    "Noc_s": {
+      "recorded_split_sha256": "c214ceb7cc5639c30e77448e869f37d95322efc224941d971b6040af02ce34c7"
+    },
+    "ST001000": {
+      "recorded_split_sha256": "c24891d40fe4a8131733c05cc5cc04270f9019115a29f6ece6e8ae3f266b1210"
+    },
+    "QM9_g298": {
+      "recorded_split_sha256": "1fdae93269c91bd74d9ca891fc66c90559f5b552dbfb150dbd984029c78a7c1e"
+    },
+    "QM8_E1-CC2": {
+      "recorded_split_sha256": "288f9c1548d3ac71f7f590ad7c7d3800fceb6de2b0278338ae7df6c90cab6ed2"
+    },
+    "Tox21_NRAhR": {
+      "recorded_split_sha256": "ceb0fa41c812c989e9766d38265d53811fbb0c8c0d9f53cbd20ffa9a991c1bfb"
+    },
+    "SIDER_nervous": {
+      "recorded_split_sha256": "31905bfb4f51ab38c4a13f4b5a82a90f82fd6fd54a8eacf3a7a66378bb17d02e"
+    },
+    "vep_pathogenic_coding": {
+      "recorded_split_sha256": "2b3a90c340dda745b90c272e3a2546b438dbb69fc5aff895d93ed5a9e0827061"
+    },
+    "HIV": {
+      "recorded_split_sha256": "99bf20df58e9feef676773afa346129000240567584f70e653a2dbf2b0ce1715"
+    },
+    "QM9_gap": {
+      "recorded_split_sha256": "1fdae93269c91bd74d9ca891fc66c90559f5b552dbfb150dbd984029c78a7c1e"
+    },
+    "ESOL": {
+      "recorded_split_sha256": "5dcb60f7e4b510494703a478e25b9226ae3f60279fafbfbcd468e3af16b4e666"
+    },
+    "QM8_f1-CC2": {
+      "recorded_split_sha256": "288f9c1548d3ac71f7f590ad7c7d3800fceb6de2b0278338ae7df6c90cab6ed2"
+    },
+    "SIDER_gastro": {
+      "recorded_split_sha256": "31905bfb4f51ab38c4a13f4b5a82a90f82fd6fd54a8eacf3a7a66378bb17d02e"
+    },
+    "Tox21_SRMMP": {
+      "recorded_split_sha256": "29a73d6fb4a69b20b3ee9e6d6bdfb4d42d13b2c6f07f8e4abbb2a39527e71564"
+    },
+    "Tox21_NRER": {
+      "recorded_split_sha256": "c177ff5653977bc40947a226e6b8692e5c5b32e7de7383f755998bb34652bfc9"
+    },
+    "bioresponse": {
+      "recorded_split_sha256": "526e1ca48b9db67ac9d64cece9b345ee1b29ae3a663791a3f6df157da033a241"
+    },
+    "QSAR_biodegradation": {
+      "recorded_split_sha256": "efec0addf138e5e11dd4e23a74df95723f47da8d0b0e523ddd9bc5142cce0293"
+    },
+    "Parkinson_Speech": {
+      "recorded_split_sha256": "b7af51682985e80ed388919cc5ab632e08904de62c62e3b69dbd8f960a8ea9c0"
+    },
+    "National_Health_and_Nutrition_Health_Survey": {
+      "recorded_split_sha256": "2cde5acf1840ba9cdb248dcee7daf194817fbb93f86e007289aa9107ded82c34"
+    },
+    "ecoli": {
+      "recorded_split_sha256": "4b536052fee4fb80ffad27f6889a8ca0843a995b88d53d24c72389533256a51a"
+    },
+    "IACCD": {
+      "recorded_split_sha256": "fef211eee182c6173958b5adae1d69757624a522d5deb32944e344950b2d7d4c"
+    },
+    "metabric_grade": {
+      "recorded_split_sha256": "c0a3be709c6debc86fed920bf245174147303515699bdc733d24c23b5a3f23c7"
+    },
+    "audiology": {
+      "recorded_split_sha256": "57332ff414a3b5e8cee64aef1251df86b4a6b708f96a3628d752ef84f8da9ceb"
+    },
+    "wisconsin-breast-cancer": {
+      "recorded_split_sha256": "7e9da02ebbff829d3b2328d716899adfd4528d70bcdd9dc3ed17234f8e0c0f91"
+    },
+    "HeartDisease_UCI": {
+      "recorded_split_sha256": "6f17c660d01f3cfdeadd56ac05e599dd70d9f62eab5878663ffe44bcccd88a65"
+    },
+    "PatientCare": {
+      "recorded_split_sha256": "7ab50b060acbbb8190b2f775195f126d5cfe23fe272cc53bcbac407345cf0d35"
+    },
+    "Diabetic_Retinopathy_Debrecen": {
+      "recorded_split_sha256": "1cf269dcb961ee73ea374a6ec0c35234a0084524bd8d150dd3ac9c2464a2f19e"
+    },
+    "dermatology": {
+      "recorded_split_sha256": "6d6545d7f73863d92f50a68c84e4b4cfce7cc95b16ef8cd9e42c5d312ab44b64"
+    },
+    "sick": {
+      "recorded_split_sha256": "a2c3d6b55e6670ef7692373bc7b256a47e14fe2dadbada97d93ab9f30e8c508c"
+    },
+    "MUSIC": {
+      "recorded_split_sha256": "5111033374aa6dc05b87006fa638a3545a82950d99abb5bf7ece543b393f54f1"
+    },
+    "CDC_Diabetes_Health_Indicators": {
+      "recorded_split_sha256": "43be50396197aa0357756e35541830d39405263a4e5ce233a0cc385e8d453609"
+    },
+    "ilpd_patient_data": {
+      "recorded_split_sha256": "f9fcd56599c9c2e1b7569c57098989fe8187bd59fef2a6b397c6c92dd34c0f3f"
+    },
+    "blood-transfusion-service": {
+      "recorded_split_sha256": "4a8c000fd4bf59803231eb89e0847e10fc8722626f4f2c70cd818d13d43e91e3"
+    },
+    "thyroid": {
+      "recorded_split_sha256": "dca62d260f78e8d3b206c479773e7dd6d60c52182cb76c6fbf83a3f0c64fa79d"
+    },
+    "Diabetes_UCI": {
+      "recorded_split_sha256": "53c198551f92fdbde6333e420b76674d38f3b780fa68124c65006cbb121fed06"
+    },
+    "spectf": {
+      "recorded_split_sha256": "12c1704c6073de291e7a0032e3c8dd8252934b341dd9acf2b43753eaaedc5c58"
+    },
+    "coords_1k": {
+      "recorded_split_sha256": "18a6ad2fabd6b6efb6c1566039b24b97a486c0390b46d98e54c9897fa069d540"
+    },
+    "maternal_health_risk": {
+      "recorded_split_sha256": "b31a624598d37afd9f4022e9d0e62a91c7ac2acd31d24046698d49daeeb3b754"
+    },
+    "pima_diabetes": {
+      "recorded_split_sha256": "f30d9c2f87c2c8c8b35af63b854fc1b4604fb937f972647c42fddfcba22bb827"
+    },
+    "Cardiovascular-Disease-dataset": {
+      "recorded_split_sha256": "5b61a09715a0204755a8dc943e2ca34a4349c3576581db69ce16cfb70f1e6072"
+    },
+    "lymphography": {
+      "recorded_split_sha256": "776f4fd147e23c36cc6e311f60ec81f2f7d5d223eaf2b801ff64f669fb43138e"
+    },
+    "VitalDB": {
+      "recorded_split_sha256": "a570d7ad081de765b3d94d9b84a623cf133de5622cd55521accab55d044a2006"
+    }
+  },
+  "models": {
+    "DecisionTree": {
+      "hpo_enabled": true
+    },
+    "RandomForest": {
+      "hpo_enabled": true
+    },
+    "XGBoost": {
+      "hpo_enabled": true
+    },
+    "LightGBM": {
+      "hpo_enabled": true
+    },
+    "CatBoost": {
+      "hpo_enabled": true
+    },
+    "xRFM": {
+      "hpo_enabled": true
+    },
+    "LinearModel": {
+      "hpo_enabled": false
+    },
+    "LassoModel": {
+      "hpo_enabled": true
+    },
+    "RidgeModel": {
+      "hpo_enabled": true
+    },
+    "ElasticNet": {
+      "hpo_enabled": true
+    },
+    "KNN": {
+      "hpo_enabled": true
+    },
+    "SVM": {
+      "hpo_enabled": true
+    },
+    "NeoLsSVM": {
+      "hpo_enabled": false
+    },
+    "MLP": {
+      "hpo_enabled": true
+    },
+    "RealMLP": {
+      "hpo_enabled": true
+    },
+    "TabM": {
+      "hpo_enabled": true
+    },
+    "TabPFNv2.5": {
+      "hpo_enabled": true
+    },
+    "TabPFN-Wide": {
+      "hpo_enabled": true
+    },
+    "RealTabPFNv2.5": {
+      "hpo_enabled": true
+    },
+    "TabICLv2": {
+      "hpo_enabled": true
+    },
+    "TabDPT": {
+      "hpo_enabled": true
+    },
+    "HyperFast": {
+      "hpo_enabled": true
+    },
+    "iLTM": {
+      "hpo_enabled": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "CatBoost": "#278502",
+  "DecisionTree": "#7b62b8",
+  "ElasticNet": "#e4c1ff",
+  "KNN": "#c21875",
+  "LassoModel": "#ee1401",
+  "LightGBM": "#5a0020",
+  "LinearModel": "#079a94",
+  "MLP": "#133ffe",
+  "NeoLsSVM": "#b67166",
+  "RandomForest": "#49d9b9",
+  "RealMLP": "#823b04",
+  "RealTabPFNv2.5": "#53a0ff",
+  "RidgeModel": "#0051a0",
+  "SVM": "#440164",
+  "TabDPT": "#fc54e1",
+  "TabICLv2": "#58f823",
+  "TabM": "#ffac97",
+  "TabPFNv2.5": "#80057c",
+  "XGBoost": "#6a0cce",
+  "iLTM": "#0604ac",
+  "xRFM": "#003f4b"
+}

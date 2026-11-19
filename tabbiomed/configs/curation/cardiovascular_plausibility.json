@@ -1,0 +1,102 @@
+{
+  "dataset": "Cardiovascular-Disease-dataset",
+  "protocol": "cardiovascular_fixed_plausibility_v1",
+  "bounds": {
+    "height_cm": [
+      100,
+      230
+    ],
+    "weight_kg": [
+      20,
+      300
+    ],
+    "systolic_mmHg": [
+      50,
+      300
+    ],
+    "diastolic_mmHg": [
+      20,
+      200
+    ]
+  },
+  "pressure_order": "diastolic < systolic",
+  "num_samples": 68606,
+  "num_features": 11,
+  "class_counts": [
+    34659,
+    33947
+  ],
+  "source_stats": {
+    "rows_before": 70000,
+    "flagged_rows": 1336,
+    "rule_counts": {
+      "height_cm": 30,
+      "weight_kg": 2,
+      "systolic_mmHg": 228,
+      "diastolic_mmHg": 991,
+      "diastolic_ge_systolic": 1236
+    },
+    "conflicting_patterns": 17,
+    "rows_after": 68606
+  },
+  "installed_cohort_filter_stats": {
+    "rows_before": 69942,
+    "flagged_rows": 1336,
+    "rule_counts": {
+      "height_cm": 30,
+      "weight_kg": 2,
+      "systolic_mmHg": 228,
+      "diastolic_mmHg": 991,
+      "diastolic_ge_systolic": 1236
+    },
+    "conflicting_patterns": 0,
+    "rows_after": 68606
+  },
+  "split_sizes": {
+    "train": 48024,
+    "val": 10291,
+    "test": 10291
+  },
+  "input_sha256": {
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/C_train.npy": "ec0b97f36556e6c463f441f30483b56a7973e2f4c4cad0b0010adc405b3587c6",
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/C_val.npy": "c52438bfba9841fc2697bf598abe4859d142699073819f31a684f6050497a87c",
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/C_test.npy": "c2592941492d69ff19f46a1f4403baa471f1b3c7a2c717fffa4bd747fb417d55",
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/y_val.npy": "ebbc1ca18f9982e596f18188c752b4e67196c48e644beb374d2bf1bb09fce58d",
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/N_val.npy": "5cb51d0c788d263399ce753d637c105ebd1a9c64ed45bba7adf5f9eefcb840a6",
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/N_test.npy": "9c4e5595560bd28e20bbfce40a36db9d8fcf5fbebfeb040f16fe5a3602716391",
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/y_train.npy": "5bec47fe763b1bd2c3eaca19f96d4886de38254951af35b5696a11d4d86ca35f",
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/N_train.npy": "3067ac42a8db49848e4cf3e23e64265ee8b462b935ab3e3b87efff94989ea573",
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/y_test.npy": "78b7f8f0b5e298eb53a54f043d4304f9b1a5802c39f9ae1f687c06799041fdde",
+    "raw/TALENT_Datasets/Cardiovascular-Disease-dataset/info.json": "65f4657cd7110130fd8a1c821dbe833f1cb0c41c0e562d3f6ce393f6d6768911",
+    "unified_format/Cardiovascular-Disease-dataset/X.npy": "52c4ff7a1b078df09c6990e93469c8e2f313f3d9ef97991d69ac2a7a0b3f8b25",
+    "unified_format/Cardiovascular-Disease-dataset/y.npy": "925525cee14e73089ffee8f2570c2f03683c08504cc2d79320533b06acd28f73",
+    "unified_format/Cardiovascular-Disease-dataset/metadata.json": "84f527ab5b9afd5488c7a787d4d302a68d13fb3c14672d4f8a4955181e2c93ec",
+    "processed/Cardiovascular-Disease-dataset/X.npy": "52c4ff7a1b078df09c6990e93469c8e2f313f3d9ef97991d69ac2a7a0b3f8b25",
+    "processed/Cardiovascular-Disease-dataset/y.npy": "6d8dcbe0c609397bffb786eb240eaa2c06286525f2c1b01ae44db2020a01486e",
+    "processed/Cardiovascular-Disease-dataset/metadata.json": "0985a8fbcb34f40bb0f2f3f0f59f59cce88377874392beaaa4e0a560366da337",
+    "processed/Cardiovascular-Disease-dataset/split_indices.npy": "0ede7193a4ad0a7d5f878edc2f0e12fa9fb83b598ba522749879b210222ef2ae",
+    "metafeatures_set1.csv": "6e09dccbd4d943e0daff57b215fbd0d63d41743ae39f80824ceb7b048928e8db"
+  },
+  "output_sha256": {
+    "metafeatures_set1.csv": "d8dc734844b1b22c09a82750fcb93d2e609cdf1fd6760ddd05fae3d088a5727d",
+    "RAI_fields/Cardiovascular-Disease-dataset_RAI.json": "52f9dcc9ee05744abf9b7fe73bc090cb303012bda49c72d775feeac11718a660",
+    "paper-ready-croissants/Cardiovascular-Disease-dataset.croissant.json": "58697000a342871a4adf1034dc908778ddbd9419c6757805439188c03416c77f",
+    "unified_format/Cardiovascular-Disease-dataset/X.npy": "df4ab35a9948477f2423f5e79ee6dd0106030d6877502343abb307b0c319a74b",
+    "unified_format/Cardiovascular-Disease-dataset/y.npy": "6ba44601bda8356d174c7576282c0e9fb7868a5550016224142aac6af428e969",
+    "unified_format/Cardiovascular-Disease-dataset/split_indices.npy": "5b61a09715a0204755a8dc943e2ca34a4349c3576581db69ce16cfb70f1e6072",
+    "unified_format/Cardiovascular-Disease-dataset/metadata.json": "09d666902644259cbac3c00bd7638efb210b28ef8ae2c705cfcb6c0e900aa348",
+    "processed/Cardiovascular-Disease-dataset/X.npy": "df4ab35a9948477f2423f5e79ee6dd0106030d6877502343abb307b0c319a74b",
+    "processed/Cardiovascular-Disease-dataset/y.npy": "90771cb612a3075dab56f9ce943e046a31600b5b672469efcf8d3f59043b2299",
+    "processed/Cardiovascular-Disease-dataset/split_indices.npy": "5b61a09715a0204755a8dc943e2ca34a4349c3576581db69ce16cfb70f1e6072",
+    "processed/Cardiovascular-Disease-dataset/metadata.json": "4baf22bc096d080b56b0c642eb0bbc0185c7bf2be2226ca72fbfa47cfa740268",
+    "processed/Cardiovascular-Disease-dataset/dataset_summary/class_distribution.png": "372ab9e6f4877f67920d303a03a4005694df9d4ec1641fb6ee43ab045a966016",
+    "processed/Cardiovascular-Disease-dataset/dataset_summary/features_samples_ratio.png": "ecfc316b2a6ae3acbab8d47a12c7ce91b4b2c2076a8db249deddf44f88bdb319",
+    "processed/Cardiovascular-Disease-dataset/dataset_summary/missing_value_distribution.png": "f4b36674c9e298f1f17bbeff243f75fa35bc059a5abfa41e5e1cdf27d732277a",
+    "processed_parquet/EHR/Cardiovascular-Disease-dataset/train.parquet": "560978a8f9063e92d0e5af8faaa1dab60b1764edca08515685cadc67b7b07c13",
+    "processed_parquet/EHR/Cardiovascular-Disease-dataset/val.parquet": "4a01ffb0936e3e34d587c11d31d547131779d34c1e53a96574d6463464fab9da",
+    "processed_parquet/EHR/Cardiovascular-Disease-dataset/test.parquet": "00a7df0a7075d73e6c166dc499f18d484437fc49b9bd18d411ab7dad74ed6ae4",
+    "processed_parquet/EHR/Cardiovascular-Disease-dataset/metadata.json": "4baf22bc096d080b56b0c642eb0bbc0185c7bf2be2226ca72fbfa47cfa740268"
+  },
+  "fresh_evaluation_required": true,
+  "source_url": "https://www.openml.org/api/v1/json/data/45547"
+}

@@ -1,0 +1,294 @@
+{
+  "protocol": "source_verified_pmlb_v1",
+  "pmlb_commit": "7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68",
+  "datasets": {
+    "dermatology": {
+      "uci_id": 33,
+      "uci_url": "https://archive.ics.uci.edu/dataset/33/dermatology",
+      "files": {
+        "pmlb": {
+          "filename": "dermatology.tsv.gz",
+          "url": "https://media.githubusercontent.com/media/EpistasisLab/pmlb/7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68/datasets/dermatology/dermatology.tsv.gz",
+          "sha256": "c8852ba546e92249debecd9a897cda3f94fd10872fa13c62eb14ab40e279166e"
+        },
+        "pmlb_metadata": {
+          "filename": "metadata.yaml",
+          "url": "https://raw.githubusercontent.com/EpistasisLab/pmlb/7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68/datasets/dermatology/metadata.yaml",
+          "sha256": "16a01c9b8adcc7fc99726adb245ffc97d838e64e30a9962cdae05e8af9bdd068"
+        },
+        "uci": {
+          "filename": "dermatology.zip",
+          "url": "https://archive.ics.uci.edu/static/public/33/dermatology.zip",
+          "sha256": "c86e681b3bd02d838b3602d88700b007952bb57eb80162c7ed8966d426f5c6c8"
+        }
+      },
+      "num_samples": 366,
+      "num_features": 34,
+      "source_num_samples": 366,
+      "source_num_features": 34,
+      "original_uci_num_samples": 366,
+      "task": "classification",
+      "label": "clinical & healthcare",
+      "feature_names": [
+        "erythema",
+        "scaling",
+        "definite_borders",
+        "itching",
+        "koebner_phenomenon",
+        "polygonal_papules",
+        "follicular_papules",
+        "oral_mucosal_involvement",
+        "knee_and_elbow_involvement",
+        "scalp_involvement",
+        "family_history",
+        "melanin_incontinence",
+        "eosinophils_in_the_infiltrate",
+        "PNL_infiltrate",
+        "fibrosis_of_the_papillary_dermis",
+        "exocytosis",
+        "acanthosis",
+        "hyperkeratosis",
+        "parakeratosis",
+        "clubbing_of_the_rete_ridges",
+        "elongation_of_the_rete_ridges",
+        "thinning_of_the_suprapapillary_epidermis",
+        "spongiform_pustule",
+        "munro_microabcess",
+        "focal_hypergranulosis",
+        "disappearance_of_the_granular_layer",
+        "vacuolisation_and_damage_of_basal_layer",
+        "spongiosis",
+        "saw-tooth_appearance_of_retes",
+        "follicular_horn_plug",
+        "perifollicular_parakeratosis",
+        "inflammatory_monoluclear_inflitrate",
+        "band-like_infiltrate",
+        "Age"
+      ],
+      "cat_idx": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "pmlb_target_mapping": {
+        "1": "psoriasis",
+        "2": "seborrhoeic dermatitis",
+        "3": "lichen planus",
+        "4": "pityriasis rosea",
+        "5": "chronic dermatitis",
+        "6": "pityriasis rubra pilaris"
+      },
+      "target_mapping": {
+        "0": "psoriasis",
+        "1": "seborrhoeic dermatitis",
+        "2": "lichen planus",
+        "3": "pityriasis rosea",
+        "4": "chronic dermatitis",
+        "5": "pityriasis rubra pilaris"
+      },
+      "class_counts": {
+        "0": 112,
+        "1": 61,
+        "2": 72,
+        "3": 49,
+        "4": 52,
+        "5": 20
+      },
+      "corrections": "Restore numeric Age from UCI dermatology.data, with 8 unknown ages as NaN; preserve other 33 columns and diagnoses. Clinical and histopathological diagnosis after biopsy.",
+      "X_values_sha256": "eedcf1771e40743bef58113e84d4fdaaa20400315e3a11462c1e39c4b5948178",
+      "y_values_sha256": "cd28340df116456d1f6d22299988e3e66056908d03552938216e59160267f10e",
+      "missing_cells": 8,
+      "iLTM_source_ids": [
+        35,
+        1010
+      ]
+    },
+    "spectf": {
+      "uci_id": 96,
+      "uci_url": "https://archive.ics.uci.edu/dataset/96/spectf+heart",
+      "files": {
+        "pmlb": {
+          "filename": "spectf.tsv.gz",
+          "url": "https://media.githubusercontent.com/media/EpistasisLab/pmlb/7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68/datasets/spectf/spectf.tsv.gz",
+          "sha256": "664081130aa48fc189b2e1d3c44332f0b3eb1ee6d31b79af1643c137697677e4"
+        },
+        "pmlb_metadata": {
+          "filename": "metadata.yaml",
+          "url": "https://raw.githubusercontent.com/EpistasisLab/pmlb/7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68/datasets/spectf/metadata.yaml",
+          "sha256": "4a9bac2cf358925a59f5ca76177d2b9fc4749e886149b16359eef21a8a1f1e08"
+        },
+        "uci": {
+          "filename": "spectf.zip",
+          "url": "https://archive.ics.uci.edu/static/public/96/spectf+heart.zip",
+          "sha256": "24409e8bd112d372ec993304f029d61e5d2daa2de091399e2c3f84eed4f021ce"
+        }
+      },
+      "num_samples": 267,
+      "num_features": 44,
+      "source_num_samples": 349,
+      "source_num_features": 44,
+      "original_uci_num_samples": 267,
+      "task": "binary",
+      "label": "clinical & healthcare",
+      "feature_names": [
+        "F1R",
+        "F1S",
+        "F2R",
+        "F2S",
+        "F3R",
+        "F3S",
+        "F4R",
+        "F4S",
+        "F5R",
+        "F5S",
+        "F6R",
+        "F6S",
+        "F7R",
+        "F7S",
+        "F8R",
+        "F8S",
+        "F9R",
+        "F9S",
+        "F10R",
+        "F10S",
+        "F11R",
+        "F11S",
+        "F12R",
+        "F12S",
+        "F13R",
+        "F13S",
+        "F14R",
+        "F14S",
+        "F15R",
+        "F15S",
+        "F16R",
+        "F16S",
+        "F17R",
+        "F17S",
+        "F18R",
+        "F18S",
+        "F19R",
+        "F19S",
+        "F20R",
+        "F20S",
+        "F21R",
+        "F21S",
+        "F22R",
+        "F22S"
+      ],
+      "cat_idx": [],
+      "pmlb_target_mapping": {
+        "0": "normal",
+        "1": "abnormal"
+      },
+      "target_mapping": {
+        "0": "normal",
+        "1": "abnormal"
+      },
+      "class_counts": {
+        "0": 55,
+        "1": 212
+      },
+      "corrections": "Remove 82 redundant PMLB records, keeping first occurrences; verify exact equality with corrected UCI 80-train/187-test union. Pool for benchmark CV; supplied UCI split is provenance only.",
+      "X_values_sha256": "4925bed75db793a59b76bd437de1dc1b5f17bbc94c832c0896884f4095767433",
+      "y_values_sha256": "de075cc15e67b863f926d472a8601b54208b2c87d4733ed97c3ec1f7d05d411f",
+      "missing_cells": 0,
+      "iLTM_source_ids": [
+        337,
+        1600
+      ]
+    },
+    "ecoli": {
+      "uci_id": 39,
+      "uci_url": "https://archive.ics.uci.edu/dataset/39/ecoli",
+      "files": {
+        "pmlb": {
+          "filename": "ecoli.tsv.gz",
+          "url": "https://media.githubusercontent.com/media/EpistasisLab/pmlb/7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68/datasets/ecoli/ecoli.tsv.gz",
+          "sha256": "65b5b5ccc50a20d50008e94c78d1bc1a56aa1e02869a3d3f66d8e57c5aa8619e"
+        },
+        "pmlb_metadata": {
+          "filename": "metadata.yaml",
+          "url": "https://raw.githubusercontent.com/EpistasisLab/pmlb/7c1f4bdc00136dc2e55c87fa6b8ba6e8af6d1a68/datasets/ecoli/metadata.yaml",
+          "sha256": "0afe26bc7115221c0f4cda56da5cf2f86c83cec09d77671931d3d22b430af5e3"
+        },
+        "uci": {
+          "filename": "ecoli.zip",
+          "url": "https://archive.ics.uci.edu/static/public/39/ecoli.zip",
+          "sha256": "a6580298b76828674a5197152da7a99f4bd09bc589dbf1142900f1698882ec32"
+        }
+      },
+      "num_samples": 327,
+      "num_features": 5,
+      "source_num_samples": 327,
+      "source_num_features": 7,
+      "original_uci_num_samples": 336,
+      "task": "classification",
+      "label": "proteomics",
+      "feature_names": [
+        "mcg",
+        "gvh",
+        "lip",
+        "alm1",
+        "alm2"
+      ],
+      "cat_idx": [],
+      "pmlb_target_mapping": {
+        "0": "cp",
+        "1": "im",
+        "4": "imU",
+        "5": "om",
+        "7": "pp"
+      },
+      "target_mapping": {
+        "0": "cp",
+        "1": "im",
+        "2": "imU",
+        "3": "om",
+        "4": "pp"
+      },
+      "class_counts": {
+        "0": 143,
+        "1": 77,
+        "2": 35,
+        "3": 20,
+        "4": 52
+      },
+      "corrections": "Keep PMLB five-class cohort (cp, im, imU, om, pp); exclude imL=2, imS=2, omL=5 source records. Drop aac conservatively because supervised discriminant training-population identity is unverified (not proven leakage); drop constant chg.",
+      "X_values_sha256": "5417262092b8cf410302c177550f22d39d33b967a19795538e3d6e290d5421c2",
+      "y_values_sha256": "5e2c0337ce6e395c5c2dbf7d954bea910e7cc177e029b7d601dfff9ea9d0fcbc",
+      "missing_cells": 0,
+      "iLTM_source_ids": []
+    }
+  }
+}

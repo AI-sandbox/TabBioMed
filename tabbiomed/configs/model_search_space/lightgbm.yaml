@@ -1,0 +1,78 @@
+# search space adapted from https://github.com/autogluon/tabarena/blob/main/packages/tabarena/src/tabarena/models/lightgbm/hpo.py
+n_estimators:
+  type: categorical
+  choices: [10000]
+
+num_leaves:
+  type: int
+  low: 2
+  high: 200
+  log: true
+
+learning_rate:
+  type: float
+  low: 0.005
+  high: 0.1
+  log: true
+
+feature_fraction:
+  type: float
+  low: 0.4
+  high: 1.0
+
+bagging_fraction:
+  type: float
+  low: 0.7
+  high: 1.0
+
+bagging_freq:
+  type: categorical
+  choices: [1]
+
+min_data_in_leaf:
+  type: int
+  low: 1
+  high: 64
+  log: true
+
+extra_trees:
+  type: categorical
+  choices: [False, True]
+
+min_data_per_group:
+  type: int
+  low: 1
+  high: 100
+  log: true
+
+cat_l2:
+  type: float
+  low: 0.005
+  high: 2.0
+  log: true
+
+cat_smooth:
+  type: float
+  low: 0.001
+  high: 100
+  log: true
+
+max_cat_to_onehot:
+  type: int
+  low: 8
+  high: 100
+  log: true
+
+lambda_l1:
+  type: float
+  low: 0.0001
+  high: 1.0
+
+lambda_l2:
+  type: float
+  low: 0.0001
+  high: 2.0
+
+class_weight:
+  type: categorical
+  choices: ["None", "balanced"]
