@@ -12,7 +12,7 @@ Describe what you were trying to do, where you got stuck, and what you’d like 
 
 ## Suggest a dataset
 
-Open a GitHub issue with a link to the original dataset and include its license. Briefly describe the biological context and prediction task, and indicate which of TabBioMed’s eight biomedical domains the dataset fits. Mention any existing splits to preserve or groups that should stay together.
+Open a GitHub issue with a link to the original dataset and include its license. Briefly describe the biological context and prediction task, and indicate which of TabBioMed’s biomedical domains (or new domain) the dataset fits. Mention any existing splits to preserve or groups that should stay together.
 
 If you’re preparing curation code, see [Adding datasets](docs/datasets.md#adding-datasets) for what to include.
 
