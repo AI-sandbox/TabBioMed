@@ -1,16 +1,20 @@
-<p><img src="docs/assets/logo.png" width="128" height="128" alt="TabBioMed logo"></p>
+<p align="center"><img src="docs/assets/logo.png" width="128" height="128" alt="TabBioMed logo"></p>
 
-# TabBioMed: A Large-Scale Benchmark<br>for Biomedical Tabular Learning
+<h1 align="center">TabBioMed: A Large-Scale Benchmark for<br>Biomedical Tabular Learning</h1>
 
-A living benchmark for biomedical tabular learning.
+<p align="center">A living benchmark for biomedical tabular learning.</p>
 
-[📄 Read the paper on arXiv](https://arxiv.org/abs/2611.23779) · [🏆 Live leaderboard](https://huggingface.co/spaces/TabBioMed/leaderboard) · [Datasets](https://huggingface.co/datasets/TabBioMed/TabBioMed)
+<p align="center">
+  <a href="https://arxiv.org/abs/2611.23779">📄 Read the paper on arXiv</a> &nbsp;·&nbsp;
+  <a href="https://huggingface.co/spaces/TabBioMed/leaderboard">🏆 Live leaderboard</a> &nbsp;·&nbsp;
+  <a href="https://huggingface.co/datasets/TabBioMed/TabBioMed">🤗 Datasets</a>
+</p>
 
-The benchmark includes 94 datasets across eight biomedical domains and 23 model implementations. The [dataset catalogue](docs/datasets.md) lists the paper scope. Datasets retain their original licenses and attribution requirements.
+TabBioMed compares 23 model implementations on 94 datasets across eight biomedical domains. It covers classification and regression, from clinical tables to high-dimensional omics data.
 
 ## Installation
 
-Python 3.12 is the tested runtime. Model and source-curation dependencies are optional. To install:
+From the repository root, install TabBioMed with `uv` and Python 3.12.
 
 ```bash
 uv venv --python 3.12
@@ -18,7 +22,7 @@ source .venv/bin/activate
 uv pip install -e .
 ```
 
-Install the groups needed for your models, for example `uv pip install -e ".[trees,neural]"`.
+Install extras for the models you plan to run. For example, `uv pip install -e ".[trees,neural]"` installs the boosted-tree and neural model extras.
 
 | Group | Models |
 |---|---|
@@ -26,11 +30,11 @@ Install the groups needed for your models, for example `uv pip install -e ".[tre
 | `trees` | XGBoost, LightGBM, CatBoost |
 | `neural` | RealMLP, TabM |
 | `pfns` | TabPFNv2.5, RealTabPFNv2.5 |
-| `tabicl`, `tabdpt`, `hyperfast`, `iltm` | Corresponding foundation model |
+| `tabicl`, `tabdpt`, `hyperfast`, `iltm` | TabICLv2, TabDPT, HyperFast, iLTM (one extra per model) |
 | `kernels` | NeoLsSVM |
-| `xrfm` | xRFM |
+| `xrfm` | xRFM, requiring Linux and CUDA |
 
-Use a separate environment for TabPFN-Wide:
+TabPFN-Wide uses a different TabPFN version. Install it in its own environment.
 
 ```bash
 uv venv --python 3.12 .venv-wide
@@ -39,34 +43,39 @@ uv pip install --python .venv-wide/bin/python -e ".[tabpfn-wide]"
 
 ## Data
 
-Official benchmark evaluations use the released datasets from [TabBioMed/TabBioMed](https://huggingface.co/datasets/TabBioMed/TabBioMed), at the pinned release revision. Local copies must match the released feature values, targets, row and column order, and splits.
-
-Use `download` to fetch the benchmark data and `verify` to check that local datasets match the release:
+Official benchmark evaluations use a pinned revision of the [TabBioMed dataset release](https://huggingface.co/datasets/TabBioMed/TabBioMed). Use `download` to fetch datasets and `verify` to check an existing copy against the release.
 
 ```text
 tabbiomed data download [DATASET ...] [--data-root PATH]
 tabbiomed data verify [DATASET ...] [--data-root PATH]
 ```
 
-Without specified dataset names, both commands process all benchmark datasets. Specify a name such as `pima_diabetes` to process only that dataset, and use `tabbiomed data list` to see available names.
+Omit the dataset names to download or verify the full benchmark. Run `tabbiomed data list` to see the names accepted by the CLI.
 
-Processed datasets are stored in `data/processed` by default. Use `--data-root PATH` to choose another directory, and pass the same path when downloading, verifying and evaluating datasets.
+Datasets go in `data/processed` by default. If you set `--data-root PATH`, use the same path for downloading, verifying and running evaluations. The download and conversion cache lives in `~/.cache/tabbiomed` by default. Set `TBM_DATA_CACHE` to store it elsewhere.
 
-Downloaded files and NumPy conversions are also cached under `~/.cache/tabbiomed`. To relocate this cache, set `TBM_DATA_CACHE` before running a command, for example `export TBM_DATA_CACHE=/path/to/cache` in Bash. This setting does not change `--data-root`.
-
-Raw curation code, including ESM embedding generation, is provided for reference and independent use. Running the benchmark does not require reconstructing datasets from raw sources. See [reference curation](docs/datasets.md#reference-curation).
+The dataset guide also documents how the released tables were built from the original sources. See [reference curation](docs/datasets.md#reference-curation).
 
 ## Evaluation
 
-Each model and dataset evaluation uses the stored test split or all five stored outer folds. Validation selection includes Default and up to 100 sampled configurations within six hours for fixed splits or two hours per outer fold. iLTM uses its 25 recommended configurations. LinearModel and NeoLsSVM evaluate Default only. Recorded search trajectories support the 25/50/100/200 configuration comparison within the same selection budget.
+Each run evaluates one model on a dataset's fixed split or all five stored outer folds. For Tuned results, the runner compares the default configuration and up to 100 sampled configurations using validation scores. iLTM uses its 25 recommended configurations. LinearModel and NeoLsSVM run with defaults only. The [evaluation guide](docs/evaluation.md#validation-and-refitting) explains refits, failed trials and the 25, 50, 100 and 200 trial comparisons.
+
+### Quick check
+
+To check that TabBioMed is working, try a CPU baseline on Pima Diabetes. The first command downloads the dataset, and the second evaluates `LinearModel`.
 
 ```bash
+tabbiomed data download pima_diabetes
 tabbiomed run --dataset pima_diabetes --model LinearModel --output results/raw
 ```
 
-Each fit runs in a fresh child process. Selection-stage process startup and serialization count against the selection budget. Failed fits are recorded and the controller continues while the budget allows.
+Look for the metrics in `report.json`, along with the test predictions and a run manifest, in the new `run_<timestamp>/` directory under `results/raw/LinearModel/pima_diabetes/`.
 
-Slurm jobs use a 24-hour limit per model and dataset pair, including all outer folds and selected final fits. Preparing jobs does not submit them. Choose partitions available on your cluster:
+### Slurm
+
+Slurm gives each model and dataset pair 24 hours for the full evaluation, including all outer folds and final fits. TabBioMed enforces a separate time budget for hyperparameter optimization (HPO) in both local and Slurm runs. This budget includes validation of the default configuration and is capped at 6 hours for a fixed split or 2 hours per outer fold for cross-validation.
+
+Use a partition available on your cluster. `jobs prepare` writes the job files, `jobs submit` previews the submission, and `--execute` submits the jobs.
 
 ```bash
 tabbiomed jobs prepare --directory jobs/pima --datasets pima_diabetes --models LinearModel --partition long
@@ -74,11 +83,15 @@ tabbiomed jobs submit --directory jobs/pima
 tabbiomed jobs submit --directory jobs/pima --execute
 ```
 
-The submission command prints its actions unless `--execute` is supplied. Select TabPFN-Wide explicitly and use its environment's Python when preparing its jobs.
+Select TabPFN-Wide explicitly and use its environment's Python when preparing its jobs. See the [Slurm guide](docs/evaluation.md#slurm) for GPU partitions and array settings.
 
-## Results
+## External PCA
 
-Raw runs retain metrics, predictions, labels and incremental search histories. Create an explicit run manifest, check the exports, then install them:
+Use `--profile pca500` with `run` or `jobs prepare` to repeat the 500-component PCA comparison for TabPFNv2.5, RealTabPFNv2.5 and TabICLv2 on datasets with more than 2,000 features. See the [PCA experiment guide](docs/pca.md).
+
+## Consolidate your runs
+
+To use your own runs as input for analysis, make a manifest, preview the consolidation and write the exports.
 
 ```bash
 tabbiomed results manifest --raw results/raw --output results/runs.json
@@ -86,40 +99,41 @@ tabbiomed results consolidate --manifest results/runs.json --output results/cons
 tabbiomed results consolidate --manifest results/runs.json --output results/consolidated --execute
 ```
 
-Consolidated results contain `report.json`, `timing.json`, test predictions and labels, and search trajectories for tunable models. Existing exports are preserved. See [evaluation and consolidation](docs/evaluation.md).
+The export includes metrics, timings, test predictions and labels, and HPO histories for tunable models. See the [consolidation guide](docs/evaluation.md#consolidation) for the file layout and how to select a run when you have multiple runs for the same pair.
 
 ## Analysis and plots
 
-Install the optional analysis dependencies:
+Install the optional analysis dependencies.
 
 ```bash
 uv pip install -e ".[analysis]"
 ```
 
-Compute leaderboards and generate figures or tables from consolidated results:
+Use the commands below to compute Elo rankings, generate the PCA comparison figures, or reproduce the paper's figures and tables.
 
 ```bash
-tabbiomed analyze elo --results results/consolidated --output outputs/elo
-tabbiomed analyze pca --results results/consolidated --output outputs/pca
-tabbiomed analyze reproduce --profile paper --results results/consolidated --output outputs/paper
+tabbiomed analyze elo --output outputs/elo
+tabbiomed analyze pca --output outputs/pca
+tabbiomed analyze reproduce --profile paper --output outputs/paper
 ```
 
-By default, analyses download the pinned published results into `data/results/`. An explicit `--results` path or `TBM_RESULTS` selects a local collection. The paper profile preserves the published model comparisons and figure settings. See [analysis and reproduction](docs/analysis.md).
+These commands download the pinned reference results to `data/results/` by default. To analyze your own exports, pass `--results results/consolidated` or set `TBM_RESULTS`. See the [analysis guide](docs/analysis.md) for individual plots and comparisons.
 
 ## Add a model
 
-Implement the model interface, register it with its search space and task support, then pass the registration module through `--model-module` when evaluating, preparing jobs or consolidating. GPU resource requirements are part of model registration. See [the model interface](docs/models.md).
+To benchmark your own model, implement and register it in an importable Python module. Pass `--model-module` when running evaluations, preparing jobs or consolidating results. The [model guide](docs/models.md) covers the interface, search spaces, supported tasks and GPU settings.
 
 ## Development
 
-Install the analysis extra and run the tests. Model-specific tests run when their optional dependencies are installed.
+Run the tests from the repository root.
 
 ```bash
-uv pip install -e ".[analysis]"
 python -m unittest discover -s tests -v
 ```
 
-The tests exercise registration, evaluation and consolidation with small CPU models. They do not submit cluster jobs or download model checkpoints.
+The suite uses small CPU models to test the local workflow, including model registration, evaluation and consolidation.
+
+See [Contributing](CONTRIBUTING.md) to report a bug or suggest a change.
 
 ## Citation and license
 
@@ -134,4 +148,4 @@ If you use TabBioMed, please cite:
 }
 ```
 
-If you use individual datasets, cite their original authors as well. Code is licensed under [Apache-2.0](LICENSE). Dataset and model-checkpoint licenses remain separate.
+If you use individual datasets, cite the original authors and follow the source licenses. The TabBioMed code uses the [Apache-2.0 license](LICENSE). Model checkpoints come with their own licenses.
