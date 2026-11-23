@@ -85,10 +85,6 @@ tabbiomed jobs submit --directory jobs/pima --execute
 
 Select TabPFN-Wide explicitly and use its environment's Python when preparing its jobs. See the [Slurm guide](docs/evaluation.md#slurm) for GPU partitions and array settings.
 
-## External PCA
-
-Use `--profile pca500` with `run` or `jobs prepare` to repeat the 500-component PCA comparison for TabPFNv2.5, RealTabPFNv2.5 and TabICLv2 on datasets with more than 2,000 features. See the [PCA experiment guide](docs/pca.md).
-
 ## Consolidate your runs
 
 To use your own runs as input for analysis, make a manifest, preview the consolidation and write the exports.
