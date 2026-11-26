@@ -27,6 +27,8 @@
     "TabICLv2": "Foundation models",
     "TabDPT": "Foundation models",
     "HyperFast": "Foundation models",
-    "iLTM": "Foundation models"
+    "iLTM": "Foundation models",
+    "Causilo-1.5": "Foundation models",
+    "Causilo-1.5-Light": "Foundation models"
   }
 }

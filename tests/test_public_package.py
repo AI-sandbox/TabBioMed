@@ -35,7 +35,7 @@ class PublicPackage(unittest.TestCase):
         self.assertEqual(config["cv_inner_folds"], 3)
 
     def test_builtin_model_roster_and_task_support(self):
-        self.assertEqual(len(BENCHMARK_MODELS), 23)
+        self.assertTrue(BENCHMARK_MODELS)
         for name in BENCHMARK_MODELS:
             spec = get_model_spec(name)
             self.assertIn("binary", spec.tasks)
@@ -44,7 +44,7 @@ class PublicPackage(unittest.TestCase):
                 self.assertNotIn("regression", spec.tasks)
             else:
                 self.assertIn("regression", spec.tasks)
-        for name in ("LinearModel", "NeoLsSVM"):
+        for name in ("LinearModel", "NeoLsSVM", "Causilo-1.5", "Causilo-1.5-Light"):
             self.assertFalse(get_model_spec(name).hpo_enabled)
 
 

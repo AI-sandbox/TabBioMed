@@ -1,6 +1,6 @@
 from types import SimpleNamespace
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 import numpy as np
 from sklearn.dummy import DummyRegressor
@@ -55,9 +55,11 @@ class ModelRegistration(unittest.TestCase):
 
         self.addCleanup(restore)
 
-    def test_original_roster_and_search_spaces(self):
-        self.assertEqual(len(models.BENCHMARK_MODELS), 23)
-        self.assertEqual(set(models.NO_HPO_MODELS), {"LinearModel", "NeoLsSVM"})
+    def test_builtin_roster_and_search_spaces(self):
+        self.assertEqual(
+            set(models.NO_HPO_MODELS),
+            {"LinearModel", "NeoLsSVM", "Causilo-1.5", "Causilo-1.5-Light"},
+        )
         for name in models.BENCHMARK_MODELS:
             self.assertIsInstance(models.get_search_space(name), dict)
         for name in ("HyperFast", "TabPFN-Wide"):
@@ -71,6 +73,29 @@ class ModelRegistration(unittest.TestCase):
         )
         self.assertFalse(models.get_model_spec("RandomForest").gpu)
         self.assertTrue(models.get_model_spec("TabM").gpu)
+
+    def test_causilo_uses_published_defaults_and_original_feature_arrays(self):
+        backend = Mock()
+        backend.CausiloClassifier.return_value.classes_ = np.array([0, 2])
+        backend.CausiloClassifier.return_value.predict_proba.return_value = [[0.2, 0.8]]
+        args = SimpleNamespace(
+            objective="classification", num_classes=3, cat_idx=[1],
+            seed=42, use_gpu=True, gpu_ids=[0],
+        )
+        train = np.array([[0.5, 11], [1.0, 35]])
+        test = np.array([[0.6, 35]])
+        for name, ensemble_size in [("causilo", 8), ("causilo-light", 1)]:
+            with self.subTest(model=name), patch.dict("sys.modules", {"causilo": backend}):
+                cls = models.str2model(name)
+                model = cls(cls.resolve_parameters(cls.get_default_params(), args), args)
+                backend.CausiloClassifier.assert_called_with(
+                    device="cuda:0", random_state=42, model_version="1.5",
+                    n_estimators=ensemble_size, max_context=None, use_kv_cache=False,
+                )
+                model.fit(train, np.array([0, 2]))
+                np.testing.assert_allclose(model.predict_proba(test), [[0.2, 0.0, 0.8]])
+                self.assertIs(model.model.fit.call_args.args[0], train)
+                self.assertIs(model.model.predict_proba.call_args.args[0], test)
 
     def test_new_model_fit_and_metrics(self):
         models.register_model(

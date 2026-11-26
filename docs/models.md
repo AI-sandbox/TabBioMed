@@ -37,6 +37,10 @@ preparing jobs. The same module must be importable on compute nodes. Set
 and aliases are unique. The benchmark records the parameters and predictions
 using the same output schema for built-in and registered models.
 
+Set `requires_separate_env=True` when a model needs its own Python environment.
+Select it explicitly with `--models` and pass that environment's interpreter
+with `--python` when preparing Slurm jobs.
+
 TabPFN and RealTabPFN download their explicitly selected v2.5 checkpoints from
 `Prior-Labs/tabpfn_2_5`. TabPFN-Wide downloads its v0.3.0 author release and the
 explicit v2 base checkpoint. Source revisions and weight identities are pinned in
@@ -49,5 +53,21 @@ Checkpoint access and licenses remain governed by the respective authors.
 TabPFN-Wide requires a separate environment because its TabPFN dependency differs
 from the TabPFNv2.5 and RealTabPFNv2.5 wrappers. Use its optional installation group
 in that environment, then select its Python executable when preparing Slurm jobs.
+
+### Causilo 1.5
+
+`Causilo-1.5` requests eight estimators and `Causilo-1.5-Light` requests one.
+Both run without HPO, fit on the full official training and validation pool,
+and score the held-out test rows. The Causilo runtime uses one estimator per
+code row for classification with more than ten classes. Both entries pass the
+stored feature arrays directly, including numeric category codes and missing
+values. Multi-target regression fits one regressor per
+target. 
+
+Install the public Causilo 1.5.0 release in its own environment with
+`uv pip install -e ".[causilo]"`. Its loader pins both checkpoints on Hugging Face
+to revision `4ca2275bae85014a19422e8c18fcf8f24c5c14e1`. The classifier hash
+matches the Nums AI evaluation. Their published regression file has a different
+checksum from the file identified in their evaluation records.
 
 The opt-in [`pca500` profile](pca.md) extends the three PCA models' registered search spaces with fixed external PCA settings. Main evaluations keep external PCA disabled.
