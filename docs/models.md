@@ -37,6 +37,10 @@ preparing jobs. The same module must be importable on compute nodes. Set
 and aliases are unique. The benchmark records the parameters and predictions
 using the same output schema for built-in and registered models.
 
+Set `requires_separate_env=True` when a model needs its own Python environment.
+Select it explicitly with `--models` and pass that environment's interpreter
+with `--python` when preparing Slurm jobs.
+
 TabPFN and RealTabPFN download their explicitly selected v2.5 checkpoints from
 `Prior-Labs/tabpfn_2_5`. TabPFN-Wide downloads its v0.3.0 author release and the
 explicit v2 base checkpoint. Source revisions and weight identities are pinned in

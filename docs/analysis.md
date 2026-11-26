@@ -20,7 +20,7 @@ Each command accepts `--help`. Individual entry points remain available, for exa
 
 ## Inputs
 
-By default, results download from the pinned `TabBioMed/results` Hugging Face release into `data/results/`. Completed files are reused and rate-limited downloads resume. An explicit `--results` path or `TBM_RESULTS` selects a local consolidated collection.
+By default, results download from the pinned `TabBioMed/results` Hugging Face release into `data/results/`. Completed files are reused and rate-limited downloads resume. An explicit `--results` path or `TBM_RESULTS` selects a local consolidated collection. Its default plan adds registered models that have a results directory in that collection to the published model roster.
 
 `--plan` sets the dataset and model scope, and `--model-families` sets model families
 and task eligibility across analysis commands. Default-only status comes from the

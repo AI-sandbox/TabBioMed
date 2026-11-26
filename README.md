@@ -10,7 +10,7 @@
   <a href="https://huggingface.co/datasets/TabBioMed/TabBioMed">🤗 Datasets</a>
 </p>
 
-TabBioMed compares 23 model implementations on 94 datasets across eight biomedical domains. It covers classification and regression, from clinical tables to high-dimensional omics data.
+TabBioMed compares tabular models on 94 datasets across eight biomedical domains. It covers classification and regression, from clinical tables to high-dimensional omics data.
 
 ## Installation
 

@@ -15,7 +15,7 @@ dependencies = [
     "pandas==2.3.3",
     "scipy==1.16.0",
     "scikit-learn==1.6.1",
-    "torch==2.8.0",
+    "torch>=2.8.0",
     "optuna==4.3.0",
     "delu==0.0.26",
     "loguru==0.7.3",

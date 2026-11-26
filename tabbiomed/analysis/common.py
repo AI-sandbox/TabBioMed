@@ -1,6 +1,5 @@
 from __future__ import annotations
-from tabbiomed.analysis.paths import PLAN, MODEL_FAMILIES
-import functools
+from tabbiomed.analysis.paths import PLAN, MODEL_FAMILIES, read_plan
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -40,13 +39,14 @@ def _parse_model_families_payload(data: dict[str, Any]) -> dict[str, str]:
     raise ValueError("model_families config needs a 'model_family' object")
 
 
-@functools.lru_cache(maxsize=8)
-def _load_benchmark_models_config_cached(path_resolved, plan_resolved):
-    data = json.loads(Path(path_resolved).read_text())
+def load_benchmark_models_config(
+    path: Path | None = None, *, plan_path: Path | None = None
+) -> BenchmarkModelsConfig:
+    data = json.loads(Path(path or DEFAULT_MODEL_FAMILIES).read_text())
     families = _parse_model_families_payload(data)
     excluded = frozenset(data["exclude_from_expected_benchmark"])
     classification_only = frozenset(data["regression_optional_missing_models"])
-    plan = json.loads(Path(plan_resolved).read_text())
+    plan = read_plan(plan_path or DEFAULT_INCLUDE_DATASETS)
     planned = set(plan["models"])
     missing = planned - set(families)
     if missing:
@@ -62,18 +62,8 @@ def _load_benchmark_models_config_cached(path_resolved, plan_resolved):
     )
 
 
-def load_benchmark_models_config(
-    path: Path | None = None, *, plan_path: Path | None = None
-) -> BenchmarkModelsConfig:
-    p = Path(path or DEFAULT_MODEL_FAMILIES)
-    plan = Path(plan_path or DEFAULT_INCLUDE_DATASETS)
-    return _load_benchmark_models_config_cached(str(p.resolve()), str(plan.resolve()))
-
-
 def load_include_datasets(path=None):
-    return frozenset(
-        json.loads(Path(path or DEFAULT_INCLUDE_DATASETS).read_text())["datasets"]
-    )
+    return frozenset(read_plan(path or DEFAULT_INCLUDE_DATASETS)["datasets"])
 
 
 def canon_domain(label: Any) -> str:

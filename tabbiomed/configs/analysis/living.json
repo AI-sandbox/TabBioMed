@@ -1,0 +1,4 @@
+{
+  "extends": "benchmark.json",
+  "include_registered_results": true
+}
