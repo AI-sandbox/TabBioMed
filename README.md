@@ -10,11 +10,11 @@
   <a href="https://huggingface.co/datasets/TabBioMed/TabBioMed">🤗 Datasets</a>
 </p>
 
-TabBioMed compares 23 model implementations on 94 datasets across eight biomedical domains. It covers classification and regression, from clinical tables to high-dimensional omics data.
+TabBioMed compares tabular models on 94 datasets across eight biomedical domains. It covers classification and regression, from clinical tables to high-dimensional omics data.
 
 ## Installation
 
-From the repository root, install TabBioMed with `uv` and Python 3.12.
+From the repository root, install TabBioMed with `uv`:.
 
 ```bash
 uv venv --python 3.12
@@ -32,6 +32,7 @@ Install extras for the models you plan to run. For example, `uv pip install -e "
 | `pfns` | TabPFNv2.5, RealTabPFNv2.5 |
 | `tabicl`, `tabdpt`, `hyperfast`, `iltm` | TabICLv2, TabDPT, HyperFast, iLTM (one extra per model) |
 | `kernels` | NeoLsSVM |
+| `causilo` | Causilo-1.5 and Causilo-1.5-Light, in a separate PyTorch 2.13 environment |
 | `xrfm` | xRFM, requiring Linux and CUDA |
 
 TabPFN-Wide uses a different TabPFN version. Install it in its own environment.

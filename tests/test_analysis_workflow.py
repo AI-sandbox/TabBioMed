@@ -130,6 +130,34 @@ class AnalysisWorkflow(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "missing a family assignment"):
                 load_benchmark_models_config(family_path, plan_path=bad_plan)
 
+    def test_local_plan_picks_up_registered_models_with_results(self):
+        from tabbiomed.analysis.common import load_benchmark_models_config
+        from tabbiomed.analysis.paths import CONFIG, read_plan
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            base = {"datasets": {}, "models": {"KNN": {"hpo_enabled": True}}}
+            paper = root / "benchmark.json"
+            paper.write_text(json.dumps(base))
+            living = root / "living.json"
+            living.write_bytes((CONFIG / "living.json").read_bytes())
+            (root / "unrelated").mkdir()
+            with patch("tabbiomed.analysis.paths.RESULTS", root):
+                self.assertEqual(read_plan(living), base)
+                before = load_benchmark_models_config(plan_path=living)
+                self.assertEqual(before.expected_models_binary_classification, ("KNN",))
+                (root / "RandomForest").mkdir()
+                (root / "LinearModel").mkdir()
+                expected = {
+                    **base["models"],
+                    "RandomForest": {"hpo_enabled": True},
+                    "LinearModel": {"hpo_enabled": False},
+                }
+                self.assertEqual(read_plan(living)["models"], expected)
+                after = load_benchmark_models_config(plan_path=living)
+                self.assertEqual(set(after.expected_models_binary_classification), set(expected))
+                self.assertEqual(read_plan(paper), base)
+
     def test_observation_groups_preserve_membership_in_dataset_subsets(self):
         from tabbiomed.analysis.figures.elo_domains import observation_partition
 
@@ -458,7 +486,7 @@ class AnalysisWorkflow(unittest.TestCase):
         self.assertEqual(len(profile["models"]), 23)
         from tabbiomed.models import BENCHMARK_MODELS
 
-        self.assertEqual(set(profile["models"]), set(BENCHMARK_MODELS))
+        self.assertTrue(set(profile["models"]).issubset(BENCHMARK_MODELS))
         self.assertTrue((TEMPLATES / "pca_deltas.tex").is_file())
         mapping = json.loads((CONFIG / "artifacts.json").read_text())
         self.assertTrue(mapping)
