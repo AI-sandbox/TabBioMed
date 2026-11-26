@@ -72,13 +72,20 @@ class SlurmWorkflow(unittest.TestCase):
                 sbatch.assert_called_once()
             self.assertEqual([r["job_id"] for r in receipt], ["123", "124"])
 
-    def test_implicit_roster_excludes_optional_wide(self):
+    def test_separate_environments_require_explicit_selection(self):
+        separate = {"TabPFN-Wide", "TabPFN-3.5"}
         with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
             with patch("tabbiomed.slurm.all_models", list(BENCHMARK_MODELS)):
-                prepare(temporary, datasets=["pima_diabetes"])
-            tasks = json.loads((Path(temporary) / "manifest.json").read_text())["tasks"]
-            self.assertNotIn("TabPFN-Wide", {t["model"] for t in tasks})
-            self.assertEqual(len(tasks), 22)
+                prepare(root / "default", datasets=["pima_diabetes"])
+            tasks = json.loads((root / "default" / "manifest.json").read_text())["tasks"]
+            names = {task["model"] for task in tasks}
+            self.assertIn("TabM", names)
+            self.assertTrue(separate.isdisjoint(names))
+
+            prepare(root / "explicit", datasets=["pima_diabetes"], models=sorted(separate))
+            tasks = json.loads((root / "explicit" / "manifest.json").read_text())["tasks"]
+            self.assertEqual({task["model"] for task in tasks}, separate)
 
 
 if __name__ == "__main__":

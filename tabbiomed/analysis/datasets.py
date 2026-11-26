@@ -1,12 +1,11 @@
 """Analysis scopes and access to the shared benchmark dataset loader."""
 
 from concurrent.futures import ThreadPoolExecutor
-import json
 from pathlib import Path
 
 from tabbiomed.data import catalog
 from tabbiomed.data import storage
-from .paths import PLAN, PARQUET, PROCESSED
+from .paths import PLAN, PARQUET, PROCESSED, read_plan
 
 
 def _numpy_root(root):
@@ -40,7 +39,7 @@ def outer_fold_count(metadata):
 
 
 def load_benchmark(path=None, root=None):
-    plan = json.loads(Path(path or PLAN).read_text())
+    plan = read_plan(path or PLAN)
     with ThreadPoolExecutor(max_workers=8) as pool:
         metadata_values = list(
             pool.map(lambda name: load_metadata(name, root), plan["datasets"])

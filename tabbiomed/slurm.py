@@ -50,12 +50,10 @@ def prepare(
         if profile == "main" or entry["metadata"]["num_features"] > PCA_MIN_FEATURES
     ]
     datasets = list(eligible if datasets is None else datasets)
-    default_models = (
-        PCA_MODELS
-        if profile == "pca500"
-        else [m for m in all_models if m != "TabPFN-Wide"]
-    )
-    models = [model_name_map(m) for m in (default_models if models is None else models)]
+    if models is None:
+        candidates = PCA_MODELS if profile == "pca500" else all_models
+        models = [name for name in candidates if not get_model_spec(name).requires_separate_env]
+    models = [model_name_map(name) for name in models]
     unknown = set(datasets) - set(scope)
     if unknown:
         raise ValueError(f"Datasets outside the benchmark scope: {sorted(unknown)}")

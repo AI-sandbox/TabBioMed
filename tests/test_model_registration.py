@@ -55,9 +55,11 @@ class ModelRegistration(unittest.TestCase):
 
         self.addCleanup(restore)
 
-    def test_original_roster_and_search_spaces(self):
-        self.assertEqual(len(models.BENCHMARK_MODELS), 23)
-        self.assertEqual(set(models.NO_HPO_MODELS), {"LinearModel", "NeoLsSVM"})
+    def test_builtin_roster_and_search_spaces(self):
+        self.assertEqual(
+            set(models.NO_HPO_MODELS),
+            {"LinearModel", "NeoLsSVM", "TabPFN-3.5"},
+        )
         for name in models.BENCHMARK_MODELS:
             self.assertIsInstance(models.get_search_space(name), dict)
         for name in ("HyperFast", "TabPFN-Wide"):

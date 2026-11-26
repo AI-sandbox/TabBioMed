@@ -22,6 +22,7 @@
     "RealMLP": "Neural networks",
     "TabM": "Neural networks",
     "TabPFNv2.5": "Foundation models",
+    "TabPFN-3.5": "Foundation models",
     "TabPFN-Wide": "Foundation models",
     "RealTabPFNv2.5": "Foundation models",
     "TabICLv2": "Foundation models",
