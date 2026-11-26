@@ -37,6 +37,10 @@ preparing jobs. The same module must be importable on compute nodes. Set
 and aliases are unique. The benchmark records the parameters and predictions
 using the same output schema for built-in and registered models.
 
+Set `requires_separate_env=True` when a model needs its own Python environment.
+Select it explicitly with `--models` and pass that environment's interpreter
+with `--python` when preparing Slurm jobs.
+
 TabPFN and RealTabPFN download their explicitly selected v2.5 checkpoints from
 `Prior-Labs/tabpfn_2_5`. TabPFN-Wide downloads its v0.3.0 author release and the
 explicit v2 base checkpoint. Source revisions and weight identities are pinned in
@@ -51,3 +55,12 @@ from the TabPFNv2.5 and RealTabPFNv2.5 wrappers. Use its optional installation g
 in that environment, then select its Python executable when preparing Slurm jobs.
 
 The opt-in [`pca500` profile](pca.md) extends the three PCA models' registered search spaces with fixed external PCA settings. Main evaluations keep external PCA disabled.
+
+### TabPFN-3.5
+
+Install `uv pip install -e '.[tabpfn35]'` in a separate environment.
+Select `--model TabPFN-3.5` for a run, or `--models TabPFN-3.5` with that
+environment's `--python` when preparing Slurm jobs. TabPFN-3.5 runs without HPO.
+It uses the pinned v3.5 checkpoint, the library's ensemble and preprocessing
+defaults, and the benchmark seed. The final fit uses the combined training and
+validation rows. Multi-output regression fits one regressor per target.

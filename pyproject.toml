@@ -43,6 +43,7 @@ analysis = [
 trees = ["xgboost==3.2.0", "lightgbm==4.5.0", "catboost==1.2.8"]
 neural = ["pytabkit==1.7.3", "tabm==0.0.3", "rtdl-num-embeddings==0.0.12"]
 pfns = ["tabpfn==6.4.1", "tabpfn-extensions==0.2.2", "kditransform==1.2.0"]
+tabpfn35 = ["tabpfn==9.2.0"]
 tabicl = ["tabicl==2.0.2"]
 tabdpt = ["tabdpt==1.1.12"]
 hyperfast = ["hyperfast==1.1.1"]
@@ -75,6 +76,7 @@ conflicts = [
     [
         { extra = "pfns" },
         { extra = "tabpfn-wide" },
+        { extra = "tabpfn35" },
     ],
     [
         { extra = "analysis" },

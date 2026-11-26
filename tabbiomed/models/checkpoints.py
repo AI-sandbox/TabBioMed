@@ -30,7 +30,7 @@ def resolve_checkpoint(family, filename, directory=None):
     path = folder / filename
     with FileLock(str(path) + ".lock"):
         if not path.is_file():
-            if family in ("tabpfn_2_5", "tabpfn_v2"):
+            if "repo_id" in source:
                 from huggingface_hub import hf_hub_download
 
                 hf_hub_download(

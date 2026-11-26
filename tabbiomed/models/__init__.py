@@ -18,6 +18,7 @@ class ModelSpec:
     tasks: tuple[str, ...]
     hpo_enabled: bool
     gpu: bool
+    requires_separate_env: bool = False
 
 
 _registry = {}
@@ -39,6 +40,7 @@ def register_model(
     tasks=TASKS,
     hpo_enabled=True,
     gpu=False,
+    requires_separate_env=False,
 ):
     """Register a BaseModel subclass or a ``module:Class`` import path."""
     if not re.fullmatch(r"[A-Za-z][A-Za-z0-9_.-]*", name):
@@ -55,7 +57,8 @@ def register_model(
     if isinstance(model_class, str) and ":" not in model_class:
         raise ValueError("Model import paths must use module:Class")
     _registry[name] = ModelSpec(
-        name, model_class, deepcopy(search_space), tuple(tasks), hpo_enabled, bool(gpu)
+        name, model_class, deepcopy(search_space), tuple(tasks), hpo_enabled,
+        gpu=bool(gpu), requires_separate_env=bool(requires_separate_env),
     )
     _aliases.update({_key(alias): name for alias in names})
     all_models.append(name)
@@ -152,6 +155,7 @@ for _name, _module, _class, _config, _names in _BUILTINS:
         f"tabbiomed.models.model_definitions.{_module}:{_class}",
         search_space=_CONFIG / f"{_config}.yaml" if _config is not None else {},
         aliases=_names,
+        requires_separate_env=_name == "TabPFN-Wide",
         tasks=TASKS[:2] if _name in ("HyperFast", "TabPFN-Wide") else TASKS,
         hpo_enabled=_name not in ("LinearModel", "NeoLsSVM"),
         gpu=_name
@@ -167,4 +171,12 @@ for _name, _module, _class, _config, _names in _BUILTINS:
             "NeoLsSVM",
         },
     )
+register_model(
+    "TabPFN-3.5",
+    "tabbiomed.models.tabpfn35:TabPFN35",
+    aliases=("tabpfn35",),
+    hpo_enabled=False,
+    gpu=True,
+    requires_separate_env=True,
+)
 BENCHMARK_MODELS = tuple(all_models)
