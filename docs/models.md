@@ -56,7 +56,7 @@ in that environment, then select its Python executable when preparing Slurm jobs
 
 ### Causilo 1.5
 
-`Causilo-1.5` requests eight estimators and `Causilo-1.5-Light` requests one.
+`Causilo-1.5` uses the default package configuration and `Causilo-1.5-Light` requests one estimator.
 Both run without HPO, fit on the full official training and validation pool,
 and score the held-out test rows. The Causilo runtime uses one estimator per
 code row for classification with more than ten classes. Both entries pass the
@@ -64,7 +64,7 @@ stored feature arrays directly, including numeric category codes and missing
 values. Multi-target regression fits one regressor per
 target. 
 
-Install the public Causilo 1.5.0 release in its own environment with
+Install the public Causilo 1.5.1 release in its own environment with
 `uv pip install -e ".[causilo]"`. Its loader pins both checkpoints on Hugging Face
 to revision `4ca2275bae85014a19422e8c18fcf8f24c5c14e1`. The classifier hash
 matches the Nums AI evaluation. Their published regression file has a different

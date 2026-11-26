@@ -84,7 +84,7 @@ class ModelRegistration(unittest.TestCase):
         )
         train = np.array([[0.5, 11], [1.0, 35]])
         test = np.array([[0.6, 35]])
-        for name, ensemble_size in [("causilo", 8), ("causilo-light", 1)]:
+        for name, ensemble_size in [("causilo", None), ("causilo-light", 1)]:
             with self.subTest(model=name), patch.dict("sys.modules", {"causilo": backend}):
                 cls = models.str2model(name)
                 model = cls(cls.resolve_parameters(cls.get_default_params(), args), args)

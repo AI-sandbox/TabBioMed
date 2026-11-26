@@ -4,7 +4,7 @@ from ..base_model import BaseModel
 
 
 class Causilo(BaseModel):
-    n_estimators = 8
+    n_estimators = None
 
     @classmethod
     def get_default_params(cls):
