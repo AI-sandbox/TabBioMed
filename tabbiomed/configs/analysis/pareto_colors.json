@@ -15,6 +15,8 @@
   "SVM": "#440164",
   "TabDPT": "#fc54e1",
   "TabICLv2": "#58f823",
+  "TabOmicsv2.5x1": "#e66b00",
+  "TabOmicsv2.5x8": "#aa3200",
   "TabM": "#ffac97",
   "TabPFNv2.5": "#80057c",
   "XGBoost": "#6a0cce",

@@ -171,4 +171,12 @@ for _name, _module, _class, _config, _names in _BUILTINS:
             "NeoLsSVM",
         },
     )
+for _name, _class in (
+    ("TabOmicsv2.5x1", "TabOmicsV25X1"),
+    ("TabOmicsv2.5x8", "TabOmicsV25X8"),
+):
+    register_model(
+        _name, f"tabbiomed.models.model_definitions.tabomics:{_class}",
+        tasks=TASKS[:2], gpu=True, hpo_enabled=False,
+    )
 BENCHMARK_MODELS = tuple(all_models)

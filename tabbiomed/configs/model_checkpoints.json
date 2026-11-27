@@ -28,6 +28,14 @@
       "tabpfn-v2-classifier-v2_default.ckpt": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49"
     }
   },
+  "tabomics_2_5": {
+    "repo_id": "lbotecur/tabomics-v2.5",
+    "revision": "5b80160242101a612158820852125b2fb95940ea",
+    "sha256": {
+      "config.json": "7b3c1760ba105e0ec690a3a3aad2110706298b9143de13d4dedbb9a226d08189",
+      "model.safetensors": "9d3d93560f029dea44678a387c3fdd03776ea95ebf3e59861829b2f974f4dac7"
+    }
+  },
   "tabpfn_wide": {
     "urls": {
       "tabpfn-wide-v2-1.5k-nocat.pt": "https://raw.githubusercontent.com/not-a-feature/TabPFN-Wide/27376d31b169afa01d4bf8e0cdaf0d01489caba6/tabpfnwide/models/tabpfn-wide-v2-1.5k-nocat.pt",
