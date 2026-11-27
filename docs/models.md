@@ -58,8 +58,8 @@ The opt-in [`pca500` profile](pca.md) extends the three PCA models' registered s
 
 ### Kumo-Tabular
 
-Install NVIDIA's pinned Structured Data Models library in a dedicated environment
-with `uv pip install -e ".[kumo]"`. Select `Kumo-Tabular-Small`,
+Run `uv pip install -e ".[kumo]"` in a dedicated environment to install NVIDIA's
+`structured-data-models==0.3.0` from PyPI. Select `Kumo-Tabular-Small`,
 `Kumo-Tabular-Medium`, or `Kumo-Tabular` (Large, also accepted as
 `Kumo-Tabular-Large`). The three entries follow TabArena's Default settings with
 8, 8, and 16 ensemble members, respectively. Each member uses up to 200,000

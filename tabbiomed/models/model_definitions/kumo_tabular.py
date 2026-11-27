@@ -88,7 +88,7 @@ class KumoTabular(BaseModel):
 
         frame = _feature_frame(X)
         categorical = {str(i): "categorical" for i in self.args.cat_idx or []}
-        self.stypes = sdm.infer_stypes(frame, overrides=categorical, _low_cardinality="infer")
+        self.stypes = sdm.infer_stypes(frame, overrides=categorical)
         x = sdm.TableTensor.from_pandas(df=frame, stypes=self.stypes)
         y = sdm.TableTensor.from_pandas(
             df=pd.DataFrame({"target": np.asarray(y).reshape(-1)}),
