@@ -171,4 +171,14 @@ for _name, _module, _class, _config, _names in _BUILTINS:
             "NeoLsSVM",
         },
     )
+for _name, _class, _names in (
+    ("Kumo-Tabular", "KumoTabular", ("Kumo-Tabular-Large",)),
+    ("Kumo-Tabular-Medium", "KumoTabularMedium", ()),
+    ("Kumo-Tabular-Small", "KumoTabularSmall", ()),
+):
+    register_model(
+        _name, f"tabbiomed.models.model_definitions.kumo_tabular:{_class}",
+        aliases=_names, gpu=True, hpo_enabled=False, requires_separate_env=True,
+    )
+
 BENCHMARK_MODELS = tuple(all_models)

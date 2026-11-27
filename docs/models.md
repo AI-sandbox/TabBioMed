@@ -55,3 +55,20 @@ from the TabPFNv2.5 and RealTabPFNv2.5 wrappers. Use its optional installation g
 in that environment, then select its Python executable when preparing Slurm jobs.
 
 The opt-in [`pca500` profile](pca.md) extends the three PCA models' registered search spaces with fixed external PCA settings. Main evaluations keep external PCA disabled.
+
+### Kumo-Tabular
+
+Run `uv pip install -e ".[kumo]"` in a dedicated environment to install NVIDIA's
+`structured-data-models==0.3.0` from PyPI. Select `Kumo-Tabular-Small`,
+`Kumo-Tabular-Medium`, or `Kumo-Tabular` (Large, also accepted as
+`Kumo-Tabular-Large`). The three entries follow TabArena's Default settings with
+8, 8, and 16 ensemble members, respectively. Each member uses up to 200,000
+labeled rows from the combined training and validation partitions. Each run
+scores the official test partition. TabBioMed supplies its categorical column
+indices and Kumo fits the preprocessing recipe on the labeled context.
+
+The classifier and regressor checkpoints for each size come from
+`nvidia/Kumo-Tabular` at the v1.0.1 release commit `3c3e10bbdb590ace29e7026847f92db3c603096d`.
+Set `HF_HOME` to share downloads between jobs. GPU inference uses float16
+autocast and caches the fitted context in host memory. Regression reports the
+mean of the predicted quantiles and fits a separate model for each target.
