@@ -40,7 +40,7 @@ class PublicPackage(unittest.TestCase):
             spec = get_model_spec(name)
             self.assertIn("binary", spec.tasks)
             self.assertIn("classification", spec.tasks)
-            if name in {"HyperFast", "TabPFN-Wide"}:
+            if name in {"HyperFast", "TabPFN-Wide", "TabOmicsv2.5x1", "TabOmicsv2.5x8"}:
                 self.assertNotIn("regression", spec.tasks)
             else:
                 self.assertIn("regression", spec.tasks)

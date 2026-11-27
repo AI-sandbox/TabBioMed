@@ -30,6 +30,7 @@ Install extras for the models you plan to run. For example, `uv pip install -e "
 | `trees` | XGBoost, LightGBM, CatBoost |
 | `neural` | RealMLP, TabM |
 | `pfns` | TabPFNv2.5, RealTabPFNv2.5 |
+| `tabomics` | TabOmicsv2.5x1, TabOmicsv2.5x8 |
 | `tabicl`, `tabdpt`, `hyperfast`, `iltm` | TabICLv2, TabDPT, HyperFast, iLTM (one extra per model) |
 | `kernels` | NeoLsSVM |
 | `xrfm` | xRFM, requiring Linux and CUDA |

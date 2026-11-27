@@ -2,7 +2,9 @@
   "exclude_from_expected_benchmark": [],
   "regression_optional_missing_models": [
     "HyperFast",
-    "TabPFN-Wide"
+    "TabPFN-Wide",
+    "TabOmicsv2.5x1",
+    "TabOmicsv2.5x8"
   ],
   "model_family": {
     "DecisionTree": "Tree-based",
@@ -26,6 +28,8 @@
     "RealTabPFNv2.5": "Foundation models",
     "TabICLv2": "Foundation models",
     "TabDPT": "Foundation models",
+    "TabOmicsv2.5x1": "Foundation models",
+    "TabOmicsv2.5x8": "Foundation models",
     "HyperFast": "Foundation models",
     "iLTM": "Foundation models"
   }

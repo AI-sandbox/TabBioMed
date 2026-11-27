@@ -54,4 +54,13 @@ TabPFN-Wide requires a separate environment because its TabPFN dependency differ
 from the TabPFNv2.5 and RealTabPFNv2.5 wrappers. Use its optional installation group
 in that environment, then select its Python executable when preparing Slurm jobs.
 
+### TabOmics v2.5
+
+Install with `uv pip install -e ".[tabomics]"`. `TabOmicsv2.5x1` and
+`TabOmicsv2.5x8` run frozen classification without HPO, with one and eight
+ensemble members. The final fit uses the combined training and validation rows.
+Above ten classes they use `tabpfn-extensions` error-correcting output codes,
+which require `SCIPY_ARRAY_API=1` before Python starts. The checkpoint comes from
+`lbotecur/tabomics-v2.5` at revision `5b80160242101a612158820852125b2fb95940ea`.
+
 The opt-in [`pca500` profile](pca.md) extends the three PCA models' registered search spaces with fixed external PCA settings. Main evaluations keep external PCA disabled.
